@@ -9,3 +9,14 @@ C:\Users\Cam\source\repos\CIS375Project\CIS375Project\obj\Debug\CIS375Project.cs
 C:\Users\Cam\source\repos\CIS375Project\CIS375Project\obj\Debug\CIS375Project.csproj.CoreCompileInputs.cache
 C:\Users\Cam\source\repos\CIS375Project\CIS375Project\obj\Debug\CIS375Project.exe
 C:\Users\Cam\source\repos\CIS375Project\CIS375Project\obj\Debug\CIS375Project.pdb
+C:\Users\fru\Source\Repos\Getting-my-Goat-2\CIS375Project\CIS375Project\bin\Debug\CIS375Project.exe.config
+C:\Users\fru\Source\Repos\Getting-my-Goat-2\CIS375Project\CIS375Project\bin\Debug\CIS375Project.exe
+C:\Users\fru\Source\Repos\Getting-my-Goat-2\CIS375Project\CIS375Project\bin\Debug\CIS375Project.pdb
+C:\Users\fru\Source\Repos\Getting-my-Goat-2\CIS375Project\CIS375Project\obj\Debug\CIS375Project.csprojAssemblyReference.cache
+C:\Users\fru\Source\Repos\Getting-my-Goat-2\CIS375Project\CIS375Project\obj\Debug\CIS375Project.LoginScreen.resources
+C:\Users\fru\Source\Repos\Getting-my-Goat-2\CIS375Project\CIS375Project\obj\Debug\CIS375Project.OversightScreen.resources
+C:\Users\fru\Source\Repos\Getting-my-Goat-2\CIS375Project\CIS375Project\obj\Debug\CIS375Project.Properties.Resources.resources
+C:\Users\fru\Source\Repos\Getting-my-Goat-2\CIS375Project\CIS375Project\obj\Debug\CIS375Project.csproj.GenerateResource.cache
+C:\Users\fru\Source\Repos\Getting-my-Goat-2\CIS375Project\CIS375Project\obj\Debug\CIS375Project.exe
+C:\Users\fru\Source\Repos\Getting-my-Goat-2\CIS375Project\CIS375Project\obj\Debug\CIS375Project.pdb
+C:\Users\fru\Source\Repos\Getting-my-Goat-2\CIS375Project\CIS375Project\obj\Debug\CIS375Project.DepartmentScreen.resources

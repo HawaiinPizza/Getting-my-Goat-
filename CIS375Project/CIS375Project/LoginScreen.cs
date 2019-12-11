@@ -17,14 +17,47 @@ namespace CIS375Project
             InitializeComponent();
         }
 
+         private void LoginUserCheck(string user, string password)
+        {
+            //Check in database function (IDK how the database is going to work, or even what it's going to upload. So I'll pretend it does something ehre.
+            int UserStatus = 1; //This would be int UserStatus = Database.UserCheck(user, password);
+
+            switch (UserStatus)
+            {
+                // Can't find user in database
+                case -1:
+                    UserLoginButton.Text=("Wrong password.  Try again");
+                    break;
+                // User is department
+                case 0:
+                    this.Hide();
+                    DepartmentScreen FormDepart = new DepartmentScreen();
+                    FormDepart.ShowDialog();
+                    Application.Exit();
+                    break;
+                // User is oversight
+                case 1:
+                    this.Hide();
+                    OversightScreen FormOver = new OversightScreen();
+                    FormOver.ShowDialog();
+                    Application.Exit();
+                    break;
+                default:
+                    UserLoginButton.Text=("A critical bug has happen");
+                    break;
+
+            }
+
+
+
+        } 
+
         private void UserLoginButton_Click(object sender, EventArgs e)
         {
-
+             string Password = PasswordBox.Text;
+            string User = UserNameBox.Text;
+            LoginUserCheck(User, Password); 
         }
 
-        private void OversightLoginButton_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
