@@ -20,7 +20,7 @@ namespace CIS375Project
          private void LoginUserCheck(string user, string password)
         {
             //Check in database function (IDK how the database is going to work, or even what it's going to upload. So I'll pretend it does something ehre.
-            int UserStatus = 1; //This would be int UserStatus = Database.UserCheck(user, password);
+            int UserStatus = -1; //This would be int UserStatus = Database.UserCheck(user, password);
 
             switch (UserStatus)
             {
