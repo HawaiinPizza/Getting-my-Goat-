@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CIS375Project.classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,11 +18,14 @@ namespace CIS375Project
             InitializeComponent();
         }
 
-         private void LoginUserCheck(string user, string password)
+         private void LoginUserCheck(int dept)
         {
-            //Check in database function (IDK how the database is going to work, or even what it's going to upload. So I'll pretend it does something ehre.
-            int UserStatus = -1; //This would be int UserStatus = Database.UserCheck(user, password);
-
+               //Check in database function (IDK how the database is going to work, or even what it's going to upload. So I'll pretend it does something ehre.
+               int UserStatus = dept; //This would be int UserStatus = Database.UserCheck(user, password);
+               if (UserStatus > 1)
+               {
+                    UserStatus = 0;
+               }
             switch (UserStatus)
             {
                 // Can't find user in database
@@ -56,30 +60,8 @@ namespace CIS375Project
         {
              string Password = PasswordBox.Text;
             string User = UserNameBox.Text;
-            LoginUserCheck(User, Password);
+            LoginUserCheck(User, Password); 
         }
 
-        private void DBButtonLoginOversight_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            OversightScreen FormOver = new OversightScreen();
-            FormOver.ShowDialog();
-            Application.Exit();
-
-        }
-
-        private void DBButtonLoginDepartment_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            DepartmentScreen FormDepart = new DepartmentScreen();
-            FormDepart.ShowDialog();
-            Application.Exit();
-
-        }
-
-        private void DBButtonLoginWrong_Click(object sender, EventArgs e)
-        {
-            UserLoginButton.Text=("Wrong password.  Try again");
-        }
     }
 }

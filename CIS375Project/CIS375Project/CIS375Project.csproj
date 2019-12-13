@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -51,6 +52,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BRAINSDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="classes\User.cs" />
+    <Compile Include="classes\Login.cs" />
     <Compile Include="DepartmentScreen.cs">
       <SubType>Form</SubType>
     </Compile>
