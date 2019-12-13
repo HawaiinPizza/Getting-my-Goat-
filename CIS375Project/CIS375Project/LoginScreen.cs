@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CIS375Project.classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,11 +18,14 @@ namespace CIS375Project
             InitializeComponent();
         }
 
-         private void LoginUserCheck(string user, string password)
+         private void LoginUserCheck(int dept)
         {
-            //Check in database function (IDK how the database is going to work, or even what it's going to upload. So I'll pretend it does something ehre.
-            int UserStatus = -1; //This would be int UserStatus = Database.UserCheck(user, password);
-
+               //Check in database function (IDK how the database is going to work, or even what it's going to upload. So I'll pretend it does something ehre.
+               int UserStatus = dept; //This would be int UserStatus = Database.UserCheck(user, password);
+               if (UserStatus > 1)
+               {
+                    UserStatus = 0;
+               }
             switch (UserStatus)
             {
                 // Can't find user in database
@@ -54,10 +58,29 @@ namespace CIS375Project
 
         private void UserLoginButton_Click(object sender, EventArgs e)
         {
-             string Password = PasswordBox.Text;
-            string User = UserNameBox.Text;
-            LoginUserCheck(User, Password); 
+               Login c = new Login();
+               //takes in the user in put and send it to the class functions
+            c.Password = PasswordBox.Text;
+            c.Username = UserNameBox.Text;
+               bool good = c.Credentials(c);
+               //if the credentials match then it sends to the department choosing
+               if (good == true)
+               {
+                    //this gets the department from the login class
+                    int dept = c.GetDepartment(c);
+                    LoginUserCheck(dept);
+               }
+               else
+               {
+                    //sends back that it wasnt correct
+                    int dept = -1;
+                    LoginUserCheck(dept);
+               }
         }
 
-    }
+          private void UserNameBox_TextChanged(object sender, EventArgs e)
+          {
+
+          }
+     }
 }
