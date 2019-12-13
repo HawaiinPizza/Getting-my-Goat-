@@ -33,6 +33,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.UserNameBox = new System.Windows.Forms.TextBox();
             this.PasswordBox = new System.Windows.Forms.TextBox();
+            this.DBButtonLoginOversight = new System.Windows.Forms.Button();
+            this.DBButtonLoginDepartment = new System.Windows.Forms.Button();
+            this.DBButtonLoginWrong = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // UserLoginButton
@@ -82,11 +85,44 @@
             this.PasswordBox.Size = new System.Drawing.Size(112, 20);
             this.PasswordBox.TabIndex = 5;
             // 
+            // DBButtonLoginOversight
+            // 
+            this.DBButtonLoginOversight.Location = new System.Drawing.Point(290, 12);
+            this.DBButtonLoginOversight.Name = "DBButtonLoginOversight";
+            this.DBButtonLoginOversight.Size = new System.Drawing.Size(155, 23);
+            this.DBButtonLoginOversight.TabIndex = 6;
+            this.DBButtonLoginOversight.Text = "DEBUG Login Oversight";
+            this.DBButtonLoginOversight.UseVisualStyleBackColor = true;
+            this.DBButtonLoginOversight.Click += new System.EventHandler(this.DBButtonLoginOversight_Click);
+            // 
+            // DBButtonLoginDepartment
+            // 
+            this.DBButtonLoginDepartment.Location = new System.Drawing.Point(290, 43);
+            this.DBButtonLoginDepartment.Name = "DBButtonLoginDepartment";
+            this.DBButtonLoginDepartment.Size = new System.Drawing.Size(155, 23);
+            this.DBButtonLoginDepartment.TabIndex = 7;
+            this.DBButtonLoginDepartment.Text = "DEBUG Login Department";
+            this.DBButtonLoginDepartment.UseVisualStyleBackColor = true;
+            this.DBButtonLoginDepartment.Click += new System.EventHandler(this.DBButtonLoginDepartment_Click);
+            // 
+            // DBButtonLoginWrong
+            // 
+            this.DBButtonLoginWrong.Location = new System.Drawing.Point(290, 75);
+            this.DBButtonLoginWrong.Name = "DBButtonLoginWrong";
+            this.DBButtonLoginWrong.Size = new System.Drawing.Size(155, 23);
+            this.DBButtonLoginWrong.TabIndex = 8;
+            this.DBButtonLoginWrong.Text = "DEBUG Wrong Login";
+            this.DBButtonLoginWrong.UseVisualStyleBackColor = true;
+            this.DBButtonLoginWrong.Click += new System.EventHandler(this.DBButtonLoginWrong_Click);
+            // 
             // LoginScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(457, 214);
+            this.Controls.Add(this.DBButtonLoginWrong);
+            this.Controls.Add(this.DBButtonLoginDepartment);
+            this.Controls.Add(this.DBButtonLoginOversight);
             this.Controls.Add(this.PasswordBox);
             this.Controls.Add(this.UserNameBox);
             this.Controls.Add(this.label2);
@@ -107,6 +143,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox UserNameBox;
         private System.Windows.Forms.TextBox PasswordBox;
+        private System.Windows.Forms.Button DBButtonLoginOversight;
+        private System.Windows.Forms.Button DBButtonLoginDepartment;
+        private System.Windows.Forms.Button DBButtonLoginWrong;
     }
 }
 

@@ -56,8 +56,30 @@ namespace CIS375Project
         {
              string Password = PasswordBox.Text;
             string User = UserNameBox.Text;
-            LoginUserCheck(User, Password); 
+            LoginUserCheck(User, Password);
         }
 
+        private void DBButtonLoginOversight_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            OversightScreen FormOver = new OversightScreen();
+            FormOver.ShowDialog();
+            Application.Exit();
+
+        }
+
+        private void DBButtonLoginDepartment_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DepartmentScreen FormDepart = new DepartmentScreen();
+            FormDepart.ShowDialog();
+            Application.Exit();
+
+        }
+
+        private void DBButtonLoginWrong_Click(object sender, EventArgs e)
+        {
+            UserLoginButton.Text=("Wrong password.  Try again");
+        }
     }
 }

@@ -16,5 +16,15 @@ namespace CIS375Project
         {
             InitializeComponent();
         }
+
+        private void UILogout_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void   UIBtnLogout_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
