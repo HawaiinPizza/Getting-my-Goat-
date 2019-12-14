@@ -38,7 +38,8 @@ namespace CIS375Project
                     this.Hide();
                     DepartmentScreen FormDepart = new DepartmentScreen();
                     FormDepart.ShowDialog();
-                    Application.Exit();
+                    //this.Show();
+                    //Application.Exit();
                     break;
                 // User is oversight
                 case 1:
