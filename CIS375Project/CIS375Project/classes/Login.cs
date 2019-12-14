@@ -19,34 +19,48 @@ namespace CIS375Project.classes
           {
                //this is for retrieving the credentials from the database
                SqlConnection connection = new SqlConnection(Connstring);
-               string sql = "SELECT username, password FROM Credentials WHERE username = @username, password= @password";
-               SqlCommand cmd = new SqlCommand(sql, connection);
-               connection.Open();
-               cmd.Connection = connection;
-               //sets the values from the login screen
-               cmd.Parameters.AddWithValue("@username", c.Username);
-               cmd.Parameters.AddWithValue("@password)", c.Password);
-               //variable to return                 
-               bool match;
-               int rows = cmd.ExecuteNonQuery();
-               if (rows < 1)
+               bool match = false;
+               try
                {
-                    match = false;
-                    connection.Close();
-                    return match;
+                    string sql = "SELECT username, password FROM Credentials WHERE username = @username, password= @password";
+                    SqlCommand cmd = new SqlCommand(sql, connection);
+
+                    connection.Open();
+                    cmd.Connection = connection;
+                    //sets the values from the login screen
+                    cmd.Parameters.AddWithValue("@username", c.Username);
+                    cmd.Parameters.AddWithValue("@password)", c.Password);
+                    //variable to return                 
+                    
+                    int rows = cmd.ExecuteNonQuery();
+                    if (rows < 1)
+                    {
+                         match = false;
+                        
+                    }
+                    else
+                    {
+                         match = true;
+                         
+                    }
                }
-               else
+               catch (Exception ex)
                {
-                    match = true;
-                    connection.Close();
-                    return match;
+
                }
+               finally
+               {
+                    connection.Close();
+                    
+               }
+               return match;
           }
           //this gets the department for the login page
           public int GetDepartment(Login c)
           {
                
                SqlConnection connection = new SqlConnection(Connstring);
+
                string sql = "SELECT dept_id FROM User Credentials X, User Y WHERE username= @username AND X.u_id = Y.user_id";
                SqlCommand cmd = new SqlCommand(sql, connection);
                connection.Open();

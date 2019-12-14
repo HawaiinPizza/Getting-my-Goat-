@@ -26,10 +26,7 @@ namespace CIS375Project
             {
                 UserStatus = 0;
             }
-            if (UserStatus > 1)
-            {
-                UserStatus = 0;
-            }
+            
             switch (UserStatus)
             {
                 // Can't find user in database
