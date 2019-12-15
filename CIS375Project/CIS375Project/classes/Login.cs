@@ -22,14 +22,14 @@ namespace CIS375Project.classes
                bool match = false;
                try
                {
-                    string sql = "SELECT username, password FROM Credentials WHERE username = @username, password= @password";
+                    string sql = "SELECT username, password FROM Credentials WHERE username = @username AND password= @password";
                     SqlCommand cmd = new SqlCommand(sql, connection);
 
                     connection.Open();
                     cmd.Connection = connection;
                     //sets the values from the login screen
                     cmd.Parameters.AddWithValue("@username", c.Username);
-                    cmd.Parameters.AddWithValue("@password)", c.Password);
+                    cmd.Parameters.AddWithValue("@password", c.Password);
                     //variable to return                 
                     
                     int rows = cmd.ExecuteNonQuery();
@@ -46,6 +46,8 @@ namespace CIS375Project.classes
                }
                catch (Exception ex)
                {
+                   
+                    
 
                }
                finally
@@ -61,7 +63,7 @@ namespace CIS375Project.classes
                
                SqlConnection connection = new SqlConnection(Connstring);
 
-               string sql = "SELECT dept_id FROM User Credentials X, User Y WHERE username= @username AND X.u_id = Y.user_id";
+               string sql = "SELECT X.dept_id FROM [User credentials] Y, User X WHERE Y.username = @username AND X.user_id = Y.u_id;";
                SqlCommand cmd = new SqlCommand(sql, connection);
                connection.Open();
                cmd.Parameters.AddWithValue("@username", c.Username);
