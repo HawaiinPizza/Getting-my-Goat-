@@ -44,3 +44,14 @@ C:\Users\mosta\Source\Repos\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Deb
 C:\Users\mosta\Source\Repos\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.csproj.CoreCompileInputs.cache
 C:\Users\mosta\Source\Repos\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.exe
 C:\Users\mosta\Source\Repos\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.pdb
+C:\Users\omuna\Source\Repos\Getting-my-Goat-\CIS375Project\CIS375Project\bin\Debug\CIS375Project.exe.config
+C:\Users\omuna\Source\Repos\Getting-my-Goat-\CIS375Project\CIS375Project\bin\Debug\CIS375Project.exe
+C:\Users\omuna\Source\Repos\Getting-my-Goat-\CIS375Project\CIS375Project\bin\Debug\CIS375Project.pdb
+C:\Users\omuna\Source\Repos\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.csprojAssemblyReference.cache
+C:\Users\omuna\Source\Repos\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.DepartmentScreen.resources
+C:\Users\omuna\Source\Repos\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.LoginScreen.resources
+C:\Users\omuna\Source\Repos\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.OversightScreen.resources
+C:\Users\omuna\Source\Repos\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.Properties.Resources.resources
+C:\Users\omuna\Source\Repos\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.csproj.GenerateResource.cache
+C:\Users\omuna\Source\Repos\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.exe
+C:\Users\omuna\Source\Repos\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.pdb

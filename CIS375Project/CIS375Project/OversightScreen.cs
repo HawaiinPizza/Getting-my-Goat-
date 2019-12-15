@@ -19,7 +19,9 @@ namespace CIS375Project
 
         private void UILogout_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            LoginScreen FormDepart = new LoginScreen();
+            FormDepart.ShowDialog();
         }
 
         private void   UIBtnLogout_Click(object sender, EventArgs e)

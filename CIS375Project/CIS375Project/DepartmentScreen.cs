@@ -24,10 +24,9 @@ namespace CIS375Project
 
         private void ButtonLogout_Click(object sender, EventArgs e)
         {
-                    this.Hide();
-                    LoginScreen FormDepart = new LoginScreen();
-                    FormDepart.ShowDialog();
-
+            this.Hide();
+            LoginScreen FormDepart = new LoginScreen();
+            FormDepart.ShowDialog();
         }
     }
 }
