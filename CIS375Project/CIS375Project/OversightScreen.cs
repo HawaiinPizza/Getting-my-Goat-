@@ -37,7 +37,9 @@ namespace CIS375Project
 
         private void UIBtnviewViolations_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            ViolationLogsOversight VioOversight = new ViolationLogsOversight();
+            VioOversight.ShowDialog();
         }
 
         private void UIBtnUserMangment_Click(object sender, EventArgs e)

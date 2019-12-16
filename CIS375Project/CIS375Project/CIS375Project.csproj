@@ -130,6 +130,9 @@
     <EmbeddedResource Include="ViolationLogs.resx">
       <DependentUpon>ViolationLogs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViolationLogsOversight.resx">
+      <DependentUpon>ViolationLogsOversight.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="BRAINSDataSet.xsc">
       <DependentUpon>BRAINSDataSet.xsd</DependentUpon>
     </None>
