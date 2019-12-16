@@ -45,7 +45,7 @@ namespace CIS375Project
                 case 0:
                     this.Hide();
                     OversightScreen FormOver = new OversightScreen();
-                    //FormOver.ShowDialog();
+                    FormOver.ShowDialog();
                     //Application.Exit();
                     break;
                 default:

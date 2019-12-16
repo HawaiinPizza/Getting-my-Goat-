@@ -54,6 +54,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddSTENER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSTENER.Designer.cs">
+      <DependentUpon>AddSTENER.cs</DependentUpon>
+    </Compile>
     <Compile Include="BRAINSDataSet.cs">
       <DependentUpon>BRAINSDataSet.xsd</DependentUpon>
     </Compile>
@@ -105,6 +111,9 @@
     <Compile Include="ViolationLogsOversight.Designer.cs">
       <DependentUpon>ViolationLogsOversight.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddSTENER.resx">
+      <DependentUpon>AddSTENER.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DepartmentScreen.resx">
       <DependentUpon>DepartmentScreen.cs</DependentUpon>
     </EmbeddedResource>

@@ -13,20 +13,21 @@ namespace CIS375Project.classes
      {
           public int S_id { get; set; }
           public int D_id { get; set; }
-          public DateTime DueDate { get; set; }
+          public string DueDate { get; set; }
           static string Connstring = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
           //creating a new STENER
           public void CreateS(STENER c)
           {
                OleDbConnection con = new OleDbConnection(Connstring);
                OleDbCommand cmd = con.CreateCommand();
-               con.Open();
+               
 
-               cmd.CommandText = "INSERT INTO STENER(d_id) VALUES(@dept_id)";
+               cmd.CommandText = "INSERT INTO STENER(d_id, duedate) VALUES(@dept_id, @duedate)";
                cmd.Connection = con;
 
                //insert value
                cmd.Parameters.AddWithValue("@d_id", c.D_id);
+               cmd.Parameters.AddWithValue("@duedate", c.DueDate);
                cmd.Connection = con;
                con.Open();
                cmd.ExecuteNonQuery();
@@ -36,7 +37,7 @@ namespace CIS375Project.classes
           {
                OleDbConnection con = new OleDbConnection(Connstring);
                OleDbCommand cmd = con.CreateCommand();
-               con.Open();
+              
 
                cmd.CommandText = "DELETE FROM STENER WHERE s_id=@s_id";
                cmd.Connection = con;

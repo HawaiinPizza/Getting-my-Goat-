@@ -32,7 +32,9 @@ namespace CIS375Project
 
         private void UIBtnAddSTENER_Click(object sender, EventArgs e)
         {
-
+               this.Hide();
+               AddSTENER FormDepart = new AddSTENER();
+               FormDepart.ShowDialog();
         }
 
         private void UIBtnviewViolations_Click(object sender, EventArgs e)
