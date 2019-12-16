@@ -22,11 +22,11 @@ namespace CIS375Project.classes
                OleDbCommand cmd = con.CreateCommand();
                con.Open();
 
-               cmd.CommandText = "INSERT INTO STENER(s_id,dept_id) VALUES(NULL, @dept_id)";
+               cmd.CommandText = "INSERT INTO STENER(d_id) VALUES(@dept_id)";
                cmd.Connection = con;
 
                //insert value
-               cmd.Parameters.AddWithValue("@dept_id", c.D_id);
+               cmd.Parameters.AddWithValue("@d_id", c.D_id);
                cmd.Connection = con;
                con.Open();
                cmd.ExecuteNonQuery();
@@ -47,6 +47,13 @@ namespace CIS375Project.classes
                cmd.ExecuteNonQuery();
                con.Close();
           }
+          public void ViewS(STENER c)
+          {
+               OleDbConnection con = new OleDbConnection(Connstring);
+               OleDbCommand cmd = con.CreateCommand();
+               con.Open();
 
+               
+          }
      }
 }

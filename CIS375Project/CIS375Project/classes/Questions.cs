@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Linq;
@@ -57,10 +58,13 @@ namespace CIS375Project.classes
           {
                OleDbConnection con = new OleDbConnection(Connstring);
                OleDbCommand cmd = con.CreateCommand();
+               DataTable dt = new DataTable();
                con.Open();
 
-               cmd.CommandText = "SELECT * FROM STENER contents X, Questions Y WHERE X.s_id=@s_id AND X.question_num=Y.question_num";
+               cmd.CommandText = cmd.CommandText = "SELECT * FROM [STENER] contents X, Questions Y WHERE X.s_id=@s_id AND X.question_num=Y.question_num";
+               OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
                cmd.Connection = con;
+               adapter.Fill(dt);
 
                cmd.Parameters.AddWithValue("@s_id", c.S_id);
                cmd.Connection = con;
