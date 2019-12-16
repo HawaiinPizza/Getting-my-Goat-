@@ -36,6 +36,7 @@
             this.UIBtnApproveSTENER = new System.Windows.Forms.Button();
             this.UIBtnviewViolations = new System.Windows.Forms.Button();
             this.UIBtnSTENERMangment = new System.Windows.Forms.Button();
+            this.UserMangment = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // UILogout
@@ -106,16 +107,27 @@
             // 
             this.UIBtnSTENERMangment.Location = new System.Drawing.Point(639, 90);
             this.UIBtnSTENERMangment.Name = "UIBtnSTENERMangment";
-            this.UIBtnSTENERMangment.Size = new System.Drawing.Size(107, 370);
+            this.UIBtnSTENERMangment.Size = new System.Drawing.Size(107, 161);
             this.UIBtnSTENERMangment.TabIndex = 9;
             this.UIBtnSTENERMangment.Text = "STENER Mangment";
             this.UIBtnSTENERMangment.UseVisualStyleBackColor = true;
+            this.UIBtnSTENERMangment.Click += new System.EventHandler(this.UIBtnSTENERMangment_Click);
+            // 
+            // UserMangment
+            // 
+            this.UserMangment.Location = new System.Drawing.Point(639, 299);
+            this.UserMangment.Name = "UserMangment";
+            this.UserMangment.Size = new System.Drawing.Size(107, 161);
+            this.UserMangment.TabIndex = 10;
+            this.UserMangment.Text = "User Mangamnet";
+            this.UserMangment.UseVisualStyleBackColor = true;
             // 
             // OversightScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(758, 567);
+            this.Controls.Add(this.UserMangment);
             this.Controls.Add(this.UIBtnSTENERMangment);
             this.Controls.Add(this.UIBtnviewViolations);
             this.Controls.Add(this.UIBtnApproveSTENER);
@@ -140,5 +152,6 @@
         private System.Windows.Forms.Button UIBtnApproveSTENER;
         private System.Windows.Forms.Button UIBtnviewViolations;
         private System.Windows.Forms.Button UIBtnSTENERMangment;
+        private System.Windows.Forms.Button UserMangment;
     }
 }
