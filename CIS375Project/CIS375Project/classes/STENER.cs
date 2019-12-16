@@ -47,12 +47,91 @@ namespace CIS375Project.classes
                cmd.ExecuteNonQuery();
                con.Close();
           }
-          public void ViewS(STENER c)
-          {
-               OleDbConnection con = new OleDbConnection(Connstring);
-               OleDbCommand cmd = con.CreateCommand();
-               con.Open();
 
+        // Updates the database to approve/disaproove
+        public void Approve(STENER c, int id, bool approve)
+        {
+            OleDbConnection con = new OleDbConnection(Connstring);
+            OleDbCommand cmd = con.CreateCommand();
+            con.Open();
+
+            int value = 0;
+            if ( approve == false)
+            {
+                value = -1;
+            }
+            else
+            {
+                value = 1;
+            }
+            cmd.CommandText = "UPDATE STENER SET approval=@X WHERE s_id=@Y";
+            cmd.Parameters.AddWithValue("@X", value);
+            Console.WriteLine("ID " + id);
+            cmd.Parameters.AddWithValue("@Y", id);
+            cmd.Connection = con;
+            cmd.ExecuteNonQuery();
+            OleDbDataReader read = cmd.ExecuteReader();
+            con.Close();
+
+
+        }
+        // Get a list of steners to view
+          public List<string> ViewS(STENER c)
+          {
+            OleDbConnection con = new OleDbConnection(Connstring);
+            OleDbCommand cmd = con.CreateCommand();
+            con.Open();
+
+            cmd.CommandText = cmd.CommandText = "SELECT * FROM STENER X ";
+            OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
+            cmd.Connection = con;
+            cmd.ExecuteNonQuery();
+            OleDbDataReader read = cmd.ExecuteReader();
+
+            List<string> Arr = new List<string>();
+            while (read.Read())
+            {
+                string Temp="";
+
+                Temp +=
+                    read[0].ToString() + read[1].ToString() + read[2].ToString() ;
+
+                Arr.Add(Temp);
+            }
+            con.Close();
+            return Arr;
+               
+          }
+
+        // Get a specific
+          public List<string> GetSten(STENER c, int Sten_id, int Dep_id)
+          {
+            OleDbConnection con = new OleDbConnection(Connstring);
+            OleDbCommand cmd = con.CreateCommand();
+            con.Open();
+
+            cmd.CommandText = "SELECT * FROM STENER WHERE s_id=X AND d_id=Y";
+            cmd.Parameters.AddWithValue("X", Sten_id);
+            cmd.Parameters.AddWithValue("Y", Dep_id);
+
+            OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
+            cmd.Connection = con;
+            cmd.ExecuteNonQuery();
+            OleDbDataReader read = cmd.ExecuteReader();
+
+            List<string> Arr = new List<string>();
+            while (read.Read())
+            {
+                string Temp="";
+
+                Temp +=
+                    read[0].ToString() +":\t\t" + read[1].ToString() +":\t\t" + read[2].ToString() ;
+                Console.WriteLine(Temp, Sten_id, Dep_id);
+
+                Arr.Add(Temp);
+            }
+            con.Close();
+            return Arr;
                
           }
      }

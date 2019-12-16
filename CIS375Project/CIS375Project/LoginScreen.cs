@@ -34,7 +34,7 @@ namespace CIS375Project
                     UIUserLoginButton.Text = ("Wrong password.  Try again");
                     break;
                 // User is department
-                case 0:
+                case 1:
                     this.Hide();
                     DepartmentScreen FormDepart = new DepartmentScreen();
                     FormDepart.ShowDialog();
@@ -42,11 +42,11 @@ namespace CIS375Project
                     //Application.Exit();
                     break;
                 // User is oversight
-                case 1:
+                case 0:
                     this.Hide();
                     OversightScreen FormOver = new OversightScreen();
-                    FormOver.ShowDialog();
-                    Application.Exit();
+                    //FormOver.ShowDialog();
+                    //Application.Exit();
                     break;
                 default:
                     UIUserLoginButton.Text = ("A critical bug has happen");

@@ -73,6 +73,12 @@
     <Compile Include="DepartmentScreen.Designer.cs">
       <DependentUpon>DepartmentScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="ApproveStener.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApproveStener.Designer.cs">
+      <DependentUpon>ApproveStener.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     </Compile>
     <EmbeddedResource Include="DepartmentScreen.resx">
       <DependentUpon>DepartmentScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApproveStener.resx">
+      <DependentUpon>ApproveStener.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
