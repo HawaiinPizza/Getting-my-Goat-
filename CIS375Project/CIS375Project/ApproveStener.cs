@@ -48,6 +48,7 @@ namespace CIS375Project
             {
                 str += Str;
             }
+            MessageBox.Show(str);
 
 
 
@@ -63,7 +64,6 @@ namespace CIS375Project
             else
             {
                 string temp = listBox1.SelectedItem.ToString().Replace("\t", "");
-                MessageBox.Show(temp[0] + "\t" + temp[1] + "\t");
                 STENER form = new STENER();
                 form.Approve(form, temp[0]-48, true);
             }
