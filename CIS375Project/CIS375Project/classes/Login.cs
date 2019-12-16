@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.OleDb;
 
 namespace CIS375Project.classes
 {
@@ -15,62 +16,78 @@ namespace CIS375Project.classes
           public string Password { get; set; }
           static string Connstring = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
           //this function will return a bool, true if the credentials match, false if they dont
+          StringBuilder errorMessages = new StringBuilder();
           public bool Credentials(Login c)
           {
                //this is for retrieving the credentials from the database
-               SqlConnection connection = new SqlConnection(Connstring);
-               bool match = false;
-               try
-               {
-                    string sql = "SELECT username, password FROM Credentials WHERE username = @username AND password= @password";
-                    SqlCommand cmd = new SqlCommand(sql, connection);
-
-                    connection.Open();
-                    cmd.Connection = connection;
+               //SqlConnection connection = new SqlConnection(Connstring);
+                   bool match = false;
+                    OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\BRAINS - Copy.accdb");  
+                    OleDbCommand cmd = con.CreateCommand();    
+                    con.Open();
+                    cmd.CommandText =  "SELECT username, password FROM Credentials WHERE username = @username AND password= @password";
+                    cmd.Connection = con;
                     //sets the values from the login screen
                     cmd.Parameters.AddWithValue("@username", c.Username);
                     cmd.Parameters.AddWithValue("@password", c.Password);
                     //variable to return                 
-                    
                     int rows = cmd.ExecuteNonQuery();
+                    OleDbDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        if ( reader[0].ToString() == c.Username)
+                        {
+                            rows = 1;
+                        }
+                    Console.WriteLine(reader[0].ToString());
+                    }
+
                     if (rows < 1)
                     {
+                        Console.WriteLine("FUCK HOES");
                          match = false;
-                        
                     }
                     else
                     {
+                        Console.WriteLine(" GET BITCEHS");
                          match = true;
-                         
                     }
-               }
-               catch (Exception ex)
-               {
-                   
+                    con.Close();
                     
-
-               }
-               finally
-               {
-                    connection.Close();
-                    
-               }
                return match;
           }
           //this gets the department for the login page
           public int GetDepartment(Login c)
           {
                
-               SqlConnection connection = new SqlConnection(Connstring);
-
-               string sql = "SELECT X.dept_id FROM [User credentials] Y, User X WHERE Y.username = @username AND X.user_id = Y.u_id;";
-               SqlCommand cmd = new SqlCommand(sql, connection);
-               connection.Open();
-               cmd.Parameters.AddWithValue("@username", c.Username);
-               int dept = (int)cmd.ExecuteScalar();
-               return dept;
-
+                OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\BRAINS - Copy.accdb");  
+                OleDbCommand cmd = con.CreateCommand();    
+                con.Open();
+                cmd.CommandText =  "SELECT X.dept_id FROM Usercredentials Y, User X WHERE Y.username = @username AND X.user_id = Y.u_id";
+                cmd.Connection = con;
+                //sets the values from the login screen
+                cmd.Parameters.AddWithValue("@username", "jsmith");
+                cmd.Parameters.AddWithValue("@password", "five");
+                //variable to return                 
+                cmd.ExecuteNonQuery();
+                con.Close();
+                return 0;
+            
           }
+        
+          public void Test(Login c)
+        {
+            OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\BRAINS - Copy.accdb");  
+            OleDbCommand cmd = con.CreateCommand();    
+            con.Open();
+            cmd.CommandText = "SELECT * FROM Credentials";
+            cmd.Connection = con;    
+            cmd.ExecuteNonQuery();    
+            //MessageBox.Show("Record Submitted","Congrats");    
 
+            OleDbDataReader reader = cmd.ExecuteReader();
+
+            con.Close();   
+        }
      }
 }
