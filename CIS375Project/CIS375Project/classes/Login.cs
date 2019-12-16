@@ -19,55 +19,56 @@ namespace CIS375Project.classes
           StringBuilder errorMessages = new StringBuilder();
           public bool Credentials(Login c)
           {
-               //this is for retrieving the credentials from the database
-               //SqlConnection connection = new SqlConnection(Connstring);
-                   bool match = false;
-                    OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\BRAINS - Copy.accdb");  
-                    OleDbCommand cmd = con.CreateCommand();    
-                    con.Open();
-                    cmd.CommandText =  "SELECT username, password FROM Credentials WHERE username = @username AND password= @password";
-                    cmd.Connection = con;
-                    //sets the values from the login screen
-                    cmd.Parameters.AddWithValue("@username", c.Username);
-                    cmd.Parameters.AddWithValue("@password", c.Password);
-                    //variable to return                 
-                    int rows = cmd.ExecuteNonQuery();
-                    OleDbDataReader reader = cmd.ExecuteReader();
-                    while (reader.Read())
+                //this is for retrieving the credentials from the database
+                //SqlConnection connection = new SqlConnection(Connstring);
+                bool match = false;
+
+                OleDbConnection con = new OleDbConnection(Connstring);
+                OleDbCommand cmd = con.CreateCommand();    
+                con.Open();
+                cmd.CommandText =  "SELECT username, password FROM Credentials WHERE username = @username AND password= @password";
+                cmd.Connection = con;
+                //sets the values from the login screen
+                cmd.Parameters.AddWithValue("@username", c.Username);
+                cmd.Parameters.AddWithValue("@password", c.Password);
+                //variable to return                 
+                int rows = cmd.ExecuteNonQuery();
+                OleDbDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    if ( reader[0].ToString() == c.Username)
                     {
-                        if ( reader[0].ToString() == c.Username)
-                        {
-                            rows = 1;
-                        }
-                    Console.WriteLine(reader[0].ToString());
+                        rows = 1;
                     }
 
-                    if (rows < 1)
-                    {
-                        Console.WriteLine("FUCK HOES");
-                         match = false;
-                    }
-                    else
-                    {
-                        Console.WriteLine(" GET BITCEHS");
-                         match = true;
-                    }
-                    con.Close();
+                  Console.WriteLine(reader[0].ToString());
+                }
+
+                if (rows < 1)
+                {
+                    Console.WriteLine("FUCK HOES");
+                    match = false;
+                }
+                else
+                {
+                    Console.WriteLine(" GET BITCEHS");
+                    match = true;
+                }
+                con.Close();
                     
-               return match;
+                return match;
           }
           //this gets the department for the login page
           public int GetDepartment(Login c)
           {
-               
-                OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\BRAINS - Copy.accdb");  
+                OleDbConnection con = new OleDbConnection(Connstring);
                 OleDbCommand cmd = con.CreateCommand();    
                 con.Open();
                 cmd.CommandText =  "SELECT X.dept_id FROM Usercredentials Y, User X WHERE Y.username = @username AND X.user_id = Y.u_id";
                 cmd.Connection = con;
                 //sets the values from the login screen
-                cmd.Parameters.AddWithValue("@username", "jsmith");
-                cmd.Parameters.AddWithValue("@password", "five");
+                cmd.Parameters.AddWithValue("@username", c.Username);
+                cmd.Parameters.AddWithValue("@password", c.Password);
                 //variable to return                 
                 cmd.ExecuteNonQuery();
                 con.Close();
@@ -76,18 +77,18 @@ namespace CIS375Project.classes
           }
         
           public void Test(Login c)
-        {
-            OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\BRAINS - Copy.accdb");  
-            OleDbCommand cmd = con.CreateCommand();    
-            con.Open();
-            cmd.CommandText = "SELECT * FROM Credentials";
-            cmd.Connection = con;    
-            cmd.ExecuteNonQuery();    
-            //MessageBox.Show("Record Submitted","Congrats");    
+          {
+              OleDbConnection con = new OleDbConnection(Connstring);
+              OleDbCommand cmd = con.CreateCommand();    
+              con.Open();
+              cmd.CommandText = "SELECT * FROM Credentials";
+              cmd.Connection = con;    
+              cmd.ExecuteNonQuery();    
+              //MessageBox.Show("Record Submitted","Congrats");    
 
-            OleDbDataReader reader = cmd.ExecuteReader();
+              OleDbDataReader reader = cmd.ExecuteReader();
 
-            con.Close();   
-        }
+              con.Close();   
+          }
      }
 }
