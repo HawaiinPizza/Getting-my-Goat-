@@ -27,7 +27,7 @@ namespace CIS375Project
           {
                STENER c = new STENER();
                c.D_id = Int32.Parse(d_idBox.Text);
-               c.DueDate = dueDateBox.Text;
+               
                c.CreateS(c);
                this.Hide();
                OversightScreen FormDepart = new OversightScreen();

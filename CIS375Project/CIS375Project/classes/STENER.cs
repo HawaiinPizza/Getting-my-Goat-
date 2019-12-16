@@ -22,12 +22,12 @@ namespace CIS375Project.classes
                OleDbCommand cmd = con.CreateCommand();
                
 
-               cmd.CommandText = "INSERT INTO STENER(d_id, duedate) VALUES(@dept_id, @duedate)";
+               cmd.CommandText = "INSERT INTO STENER(d_id) VALUES(@dept_id)";
                cmd.Connection = con;
 
                //insert value
                cmd.Parameters.AddWithValue("@d_id", c.D_id);
-               cmd.Parameters.AddWithValue("@duedate", c.DueDate);
+               
                cmd.Connection = con;
                con.Open();
                cmd.ExecuteNonQuery();
