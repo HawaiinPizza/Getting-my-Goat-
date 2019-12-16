@@ -14,7 +14,7 @@ namespace CIS375Project.classes
      {
           public string Username { get; set; }
           public string Password { get; set; }
-          static string Connstring = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
+        string Conn = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\fru\Source\repos\FuckHoes\BRAINS.accdb";
           //this function will return a bool, true if the credentials match, false if they dont
           StringBuilder errorMessages = new StringBuilder();
           public bool Credentials(Login c)
@@ -22,7 +22,7 @@ namespace CIS375Project.classes
                //this is for retrieving the credentials from the database
                //SqlConnection connection = new SqlConnection(Connstring);
                    bool match = false;
-                    OleDbConnection con = new OleDbConnection("connstring");  
+                    OleDbConnection con = new OleDbConnection(Conn);  
                     OleDbCommand cmd = con.CreateCommand();    
                     con.Open();
                     cmd.CommandText =  "SELECT username, password FROM Credentials WHERE username = @username AND password= @password";
@@ -63,7 +63,7 @@ namespace CIS375Project.classes
           {
 
                 int dept = 0;
-                OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\fru\BRAINS.accdb");  
+                OleDbConnection con = new OleDbConnection(Conn);  
                 OleDbCommand cmd = con.CreateCommand();    
                 con.Open();
                 cmd.CommandText =  "SELECT X.dept_id FROM [UserCredentials] AS [Y], [User] AS [X] WHERE Y.username = @username AND X.user_id = Y.u_id";
@@ -88,10 +88,7 @@ namespace CIS375Project.classes
 //            cmd.CommandText = "SELECT * FROM Credentials";
 //            cmd.Connection = con;    
 //            cmd.ExecuteNonQuery();    
-//            //MessageBox.Show("Record Submitted","Congrats");    
-//
 //            OleDbDataReader reader = cmd.ExecuteReader();
-//
 //            con.Close();   
      }
 }
