@@ -14,15 +14,15 @@ namespace CIS375Project.classes
      {
           public string Username { get; set; }
           public string Password { get; set; }
-          static string Connstring = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
-          //this function will return a bool, true if the credentials match, false if they dont
-          StringBuilder errorMessages = new StringBuilder();
+        string Conn = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
+        //this function will return a bool, true if the credentials match, false if they dont
+        StringBuilder errorMessages = new StringBuilder();
           public bool Credentials(Login c)
           {
                //this is for retrieving the credentials from the database
                //SqlConnection connection = new SqlConnection(Connstring);
                    bool match = false;
-                    OleDbConnection con = new OleDbConnection(Connstring);  
+                    OleDbConnection con = new OleDbConnection(Conn);  
                     OleDbCommand cmd = con.CreateCommand();    
                     con.Open();
                     cmd.CommandText =  "SELECT username, password FROM Credentials WHERE username = @username AND password= @password";
@@ -63,7 +63,7 @@ namespace CIS375Project.classes
           {
 
                 int dept = 0;
-                OleDbConnection con = new OleDbConnection(Connstring);  
+                OleDbConnection con = new OleDbConnection(Conn);  
                 OleDbCommand cmd = con.CreateCommand();    
                 con.Open();
                 cmd.CommandText =  "SELECT X.dept_id FROM [UserCredentials] AS [Y], [User] AS [X] WHERE Y.username = @username AND X.user_id = Y.u_id";

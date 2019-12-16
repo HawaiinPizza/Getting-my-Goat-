@@ -28,5 +28,15 @@ namespace CIS375Project
         {
 
         }
+
+        private void UIBtnAddSTENER_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UIBtnviewViolations_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
