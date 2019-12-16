@@ -33,6 +33,9 @@ namespace CIS375Project
         private void UIBtnSTENERMangment_Click(object sender, EventArgs e)
         {
             Questions c = new Questions();
+            StenerMang form = new StenerMang();
+            this.Hide();
+            form.ShowDialog();
             c.DisplayQandA(c);
         }
     }
