@@ -46,7 +46,9 @@ namespace CIS375Project
 
           private void UIBtnUserMangment_Click(object sender, EventArgs e)
           {
-
+               this.Hide();
+               UserManagement UserM = new UserManagement();
+               UserM.ShowDialog();
           }
 
           // Open a window to get list of stener,s than either approve or disaprove
