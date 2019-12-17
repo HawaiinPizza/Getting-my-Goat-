@@ -68,5 +68,10 @@ namespace CIS375Project
             VioToDelete.DeleteVio(VioToDelete);
 
         }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -33,9 +33,9 @@ namespace CIS375Project
                User c = new User();
                c.Fname = FnameBox.Text;
                c.Lname = LnameBox.Text;
-               c.DeptID = Int32.Parse(dIDBox.Text);
-               c.Username = UsernameBox.Text;
-               c.Password = PasswordBox.Text;
+               //c.DeptID = Int32.Parse(dIDBox.Text);
+               //c.Username = UsernameBox.Text;
+               //c.Password = PasswordBox.Text;
 
                c.UserID = int.Parse(Array[listBox2.SelectedIndex-1][0]);
                c.EditUser(c);

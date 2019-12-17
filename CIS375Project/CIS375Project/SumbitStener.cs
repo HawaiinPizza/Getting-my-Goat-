@@ -54,7 +54,12 @@ namespace CIS375Project
                 if( ArrInner[1].Length==0 || ArrInner[2].Length==0)
                 {
                     MessageBox.Show("You didn't put in a reason and/or answer in one of the quesions");
+                    break;
                 }
+
+                STENER Muaz = new STENER();
+                Muaz.Sumbit(Muaz, UserID.ID);
+
             }
 
         }

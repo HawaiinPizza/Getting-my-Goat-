@@ -111,9 +111,9 @@ namespace CIS375Project.classes
             DataTable dt = new DataTable();
             con.Open();
 
-            cmd.CommandText = cmd.CommandText = "select * from Questions where s_id= @s_id";
-            cmd.Parameters.AddWithValue("@s_id", i);
+             cmd.CommandText = "SELECT * FROM Questions where s_id=@s_id";
             OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
+            cmd.Parameters.AddWithValue("@s_id", i) ;
             cmd.Connection = con;
             adapter.Fill(dt);
             cmd.ExecuteNonQuery();
@@ -131,6 +131,7 @@ namespace CIS375Project.classes
                 Temp.Add(read[6].ToString());
                 Arr.Add(Temp);
             }
+
 
             con.Close();
             return Arr;

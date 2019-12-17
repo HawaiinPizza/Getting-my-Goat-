@@ -23,7 +23,7 @@ namespace CIS375Project
             listBox1.Items.Add("Department\tStener");
             List<List<string>> Arr  = c.ViewS(c);
             foreach (List<string> ArrInner in Arr) {
-                listBox1.Items.Add(ArrInner[0] +"\t" + ArrInner[1] + "\t" + ArrInner[2]);
+                listBox1.Items.Add(ArrInner[0] +"\t" + ArrInner[1] );
             }
             this.Array=Arr;
         }
@@ -44,7 +44,7 @@ namespace CIS375Project
 
             listBox2.Items.Clear();
             Questions form = new Questions();
-            List<List<string>> Arr=form.DisplayQandA(form, listBox1.SelectedIndex);
+            List<List<string>> Arr=form.DisplayQandA(form, Int32.Parse(Array[listBox1.SelectedIndex-1][0]));
             foreach(List<string> Str in Arr)
             {
                 string STR = "";
@@ -67,7 +67,6 @@ namespace CIS375Project
             {
                 STENER form = new STENER();
                 int Temp = Int32.Parse(this.Array[listBox1.SelectedIndex-1][0]);
-                MessageBox.Show("This is your temp\t" + Temp);
                 form.Approve(form, Temp, true);
             }
         }

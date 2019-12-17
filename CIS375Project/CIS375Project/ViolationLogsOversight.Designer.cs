@@ -66,9 +66,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(714, 15);
+            this.label6.Location = new System.Drawing.Point(536, 12);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 17);
+            this.label6.Size = new System.Drawing.Size(38, 13);
             this.label6.TabIndex = 23;
             this.label6.Text = "Rating";
             // 
@@ -78,11 +79,11 @@
             this.ViolationRatingBox.DataSource = this.violationLogBindingSource2;
             this.ViolationRatingBox.DisplayMember = "rating";
             this.ViolationRatingBox.FormattingEnabled = true;
-            this.ViolationRatingBox.ItemHeight = 16;
-            this.ViolationRatingBox.Location = new System.Drawing.Point(705, 38);
+            this.ViolationRatingBox.Location = new System.Drawing.Point(529, 31);
+            this.ViolationRatingBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ViolationRatingBox.Name = "ViolationRatingBox";
             this.ViolationRatingBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.ViolationRatingBox.Size = new System.Drawing.Size(69, 244);
+            this.ViolationRatingBox.Size = new System.Drawing.Size(53, 199);
             this.ViolationRatingBox.TabIndex = 22;
             this.ViolationRatingBox.ValueMember = "rating";
             // 
@@ -109,9 +110,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(496, 15);
+            this.label5.Location = new System.Drawing.Point(372, 12);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 17);
+            this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 21;
             this.label5.Text = "Status";
             // 
@@ -121,47 +123,51 @@
             this.listBox5.DataSource = this.violationLogBindingSource;
             this.listBox5.DisplayMember = "resolved";
             this.listBox5.FormattingEnabled = true;
-            this.listBox5.ItemHeight = 16;
-            this.listBox5.Location = new System.Drawing.Point(496, 38);
+            this.listBox5.Location = new System.Drawing.Point(372, 31);
+            this.listBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBox5.Name = "listBox5";
             this.listBox5.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.listBox5.Size = new System.Drawing.Size(77, 244);
+            this.listBox5.Size = new System.Drawing.Size(59, 199);
             this.listBox5.TabIndex = 20;
             this.listBox5.ValueMember = "resolved";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(596, 15);
+            this.label4.Location = new System.Drawing.Point(447, 12);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 17);
+            this.label4.Size = new System.Drawing.Size(76, 13);
             this.label4.TabIndex = 19;
             this.label4.Text = "Department ID";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(335, 15);
+            this.label3.Location = new System.Drawing.Point(251, 12);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 17);
+            this.label3.Size = new System.Drawing.Size(73, 13);
             this.label3.TabIndex = 18;
             this.label3.Text = "Violation Date";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 15);
+            this.label2.Location = new System.Drawing.Point(24, 12);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 17);
+            this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 17;
             this.label2.Text = "Violation ID";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(189, 15);
+            this.label1.Location = new System.Drawing.Point(142, 12);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 17);
+            this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 16;
             this.label1.Text = "Description";
             // 
@@ -171,11 +177,11 @@
             this.listBox4.DataSource = this.violationLogBindingSource;
             this.listBox4.DisplayMember = "dept_id";
             this.listBox4.FormattingEnabled = true;
-            this.listBox4.ItemHeight = 16;
-            this.listBox4.Location = new System.Drawing.Point(572, 38);
+            this.listBox4.Location = new System.Drawing.Point(429, 31);
+            this.listBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBox4.Name = "listBox4";
             this.listBox4.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.listBox4.Size = new System.Drawing.Size(136, 244);
+            this.listBox4.Size = new System.Drawing.Size(103, 199);
             this.listBox4.TabIndex = 15;
             this.listBox4.ValueMember = "dept_id";
             // 
@@ -185,11 +191,11 @@
             this.listBox3.DataSource = this.violationLogBindingSource;
             this.listBox3.DisplayMember = "v_date";
             this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 16;
-            this.listBox3.Location = new System.Drawing.Point(335, 38);
+            this.listBox3.Location = new System.Drawing.Point(251, 31);
+            this.listBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBox3.Name = "listBox3";
             this.listBox3.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.listBox3.Size = new System.Drawing.Size(163, 244);
+            this.listBox3.Size = new System.Drawing.Size(123, 199);
             this.listBox3.TabIndex = 14;
             this.listBox3.ValueMember = "v_date";
             // 
@@ -199,12 +205,13 @@
             this.listBox2.DataSource = this.violationLogBindingSource;
             this.listBox2.DisplayMember = "violationID";
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(23, 38);
+            this.listBox2.Location = new System.Drawing.Point(17, 31);
+            this.listBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(163, 244);
+            this.listBox2.Size = new System.Drawing.Size(123, 199);
             this.listBox2.TabIndex = 13;
             this.listBox2.ValueMember = "violationID";
+            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // listBox1
             // 
@@ -212,11 +219,11 @@
             this.listBox1.DataSource = this.violationLogBindingSource;
             this.listBox1.DisplayMember = "Description";
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(179, 38);
+            this.listBox1.Location = new System.Drawing.Point(134, 31);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBox1.Name = "listBox1";
             this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.listBox1.Size = new System.Drawing.Size(160, 244);
+            this.listBox1.Size = new System.Drawing.Size(121, 199);
             this.listBox1.TabIndex = 12;
             this.listBox1.ValueMember = "Description";
             // 
@@ -226,43 +233,48 @@
             // 
             // DescriptionAddBox
             // 
-            this.DescriptionAddBox.Location = new System.Drawing.Point(23, 412);
+            this.DescriptionAddBox.Location = new System.Drawing.Point(17, 335);
+            this.DescriptionAddBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DescriptionAddBox.Name = "DescriptionAddBox";
-            this.DescriptionAddBox.Size = new System.Drawing.Size(156, 22);
+            this.DescriptionAddBox.Size = new System.Drawing.Size(118, 20);
             this.DescriptionAddBox.TabIndex = 24;
             // 
             // VioIDBox
             // 
-            this.VioIDBox.Location = new System.Drawing.Point(179, 412);
+            this.VioIDBox.Location = new System.Drawing.Point(134, 335);
+            this.VioIDBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.VioIDBox.Mask = "00";
             this.VioIDBox.Name = "VioIDBox";
-            this.VioIDBox.Size = new System.Drawing.Size(160, 22);
+            this.VioIDBox.Size = new System.Drawing.Size(121, 20);
             this.VioIDBox.TabIndex = 25;
             this.VioIDBox.ValidatingType = typeof(int);
             // 
             // VioDateBox
             // 
-            this.VioDateBox.Location = new System.Drawing.Point(338, 411);
+            this.VioDateBox.Location = new System.Drawing.Point(254, 334);
+            this.VioDateBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.VioDateBox.Mask = "00/00/0000";
             this.VioDateBox.Name = "VioDateBox";
-            this.VioDateBox.Size = new System.Drawing.Size(160, 22);
+            this.VioDateBox.Size = new System.Drawing.Size(121, 20);
             this.VioDateBox.TabIndex = 26;
             this.VioDateBox.ValidatingType = typeof(System.DateTime);
             // 
             // DeptIDBox
             // 
-            this.DeptIDBox.Location = new System.Drawing.Point(572, 412);
+            this.DeptIDBox.Location = new System.Drawing.Point(429, 335);
+            this.DeptIDBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DeptIDBox.Mask = "00";
             this.DeptIDBox.Name = "DeptIDBox";
-            this.DeptIDBox.Size = new System.Drawing.Size(136, 22);
+            this.DeptIDBox.Size = new System.Drawing.Size(103, 20);
             this.DeptIDBox.TabIndex = 28;
             this.DeptIDBox.ValidatingType = typeof(int);
             // 
             // AddVioButton
             // 
-            this.AddVioButton.Location = new System.Drawing.Point(221, 605);
+            this.AddVioButton.Location = new System.Drawing.Point(166, 492);
+            this.AddVioButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AddVioButton.Name = "AddVioButton";
-            this.AddVioButton.Size = new System.Drawing.Size(160, 84);
+            this.AddVioButton.Size = new System.Drawing.Size(120, 68);
             this.AddVioButton.TabIndex = 30;
             this.AddVioButton.Text = "Add Violation";
             this.AddVioButton.UseVisualStyleBackColor = true;
@@ -271,25 +283,25 @@
             // StatusBox
             // 
             this.StatusBox.FormattingEnabled = true;
-            this.StatusBox.ItemHeight = 16;
             this.StatusBox.Items.AddRange(new object[] {
             "True",
             "False"});
-            this.StatusBox.Location = new System.Drawing.Point(496, 412);
+            this.StatusBox.Location = new System.Drawing.Point(372, 335);
+            this.StatusBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.StatusBox.Name = "StatusBox";
-            this.StatusBox.Size = new System.Drawing.Size(77, 36);
+            this.StatusBox.Size = new System.Drawing.Size(59, 30);
             this.StatusBox.TabIndex = 31;
             // 
             // RatingBox
             // 
             this.RatingBox.FormattingEnabled = true;
-            this.RatingBox.ItemHeight = 16;
             this.RatingBox.Items.AddRange(new object[] {
             "Major",
             "Minor"});
-            this.RatingBox.Location = new System.Drawing.Point(705, 411);
+            this.RatingBox.Location = new System.Drawing.Point(529, 334);
+            this.RatingBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RatingBox.Name = "RatingBox";
-            this.RatingBox.Size = new System.Drawing.Size(69, 36);
+            this.RatingBox.Size = new System.Drawing.Size(53, 30);
             this.RatingBox.TabIndex = 32;
             // 
             // violationLogBindingSource1
@@ -303,9 +315,10 @@
             // 
             // DeleteVioButton
             // 
-            this.DeleteVioButton.Location = new System.Drawing.Point(437, 605);
+            this.DeleteVioButton.Location = new System.Drawing.Point(328, 492);
+            this.DeleteVioButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DeleteVioButton.Name = "DeleteVioButton";
-            this.DeleteVioButton.Size = new System.Drawing.Size(155, 84);
+            this.DeleteVioButton.Size = new System.Drawing.Size(116, 68);
             this.DeleteVioButton.TabIndex = 33;
             this.DeleteVioButton.Text = "Delete Violation";
             this.DeleteVioButton.UseVisualStyleBackColor = true;
@@ -313,10 +326,10 @@
             // 
             // ViolationLogsOversight
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(823, 716);
+            this.ClientSize = new System.Drawing.Size(617, 582);
             this.Controls.Add(this.DeleteVioButton);
             this.Controls.Add(this.RatingBox);
             this.Controls.Add(this.StatusBox);
@@ -337,6 +350,7 @@
             this.Controls.Add(this.listBox3);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ViolationLogsOversight";
             this.Text = "ViolationLogsOversight";
             this.Load += new System.EventHandler(this.ViolationLogsOversight_Load);

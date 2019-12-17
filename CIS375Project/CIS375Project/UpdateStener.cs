@@ -22,7 +22,7 @@ namespace CIS375Project
             listBox1.Items.Add("Department\tStener");
             List<List<string>> Arr  = c.ViewS(c);
             foreach (List<string> ArrInner in Arr) {
-                listBox1.Items.Add(ArrInner[0] +"\t" + ArrInner[1] + "\t" + ArrInner[2]);
+                listBox1.Items.Add(ArrInner[0] +"\t" + ArrInner[1] );
             }
             this.Array=Arr;
 
@@ -69,9 +69,9 @@ namespace CIS375Project
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Questions Q = new Questions();
-             Arr=Q.DisplayQandA(Q, listBox1.SelectedIndex);
-            listBox2.Items.Clear();
+                Questions Change = new Questions();
+                Arr=Change.DisplayQandA(Change, Int32.Parse(Array[listBox1.SelectedIndex-1][0]));
+                listBox2.Items.Clear();
             foreach (List<string> ArrInner in Arr){
                 listBox2.Items.Add(ArrInner[0] +"\t" + ArrInner[1] + "\t" + ArrInner[2] + "\t" + ArrInner[3] + "\t" + ArrInner[4]);
             }

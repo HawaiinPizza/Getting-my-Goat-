@@ -56,6 +56,20 @@ namespace CIS375Project.classes
                con.Close();
           }
 
+          public void Sumbit(STENER c, int i)
+          {
+               OleDbConnection con = new OleDbConnection(Connstring);
+               OleDbCommand cmd = con.CreateCommand();
+
+            cmd.CommandText = "UPDATE STENER SET status = TRUE WHERE s_id=(               SELECT s_id FROM STENER WHERE d_id=@d_id) ";
+               cmd.Connection = con;
+
+               cmd.Parameters.AddWithValue("d_id", i) ;
+               cmd.Connection = con;
+               con.Open();
+               cmd.ExecuteNonQuery();
+               con.Close();
+          }
         // Updates the database to approve/disaproove
         public void Approve(STENER c, int id, bool approve)
         {
@@ -90,7 +104,7 @@ namespace CIS375Project.classes
             OleDbCommand cmd = con.CreateCommand();
             con.Open();
 
-            cmd.CommandText = cmd.CommandText = "SELECT * FROM STENER X ";
+            cmd.CommandText = cmd.CommandText = "SELECT * FROM STENER ";
             OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
@@ -99,11 +113,17 @@ namespace CIS375Project.classes
             List<List<string>> Arr = new List<List<string>>();
             while (read.Read())
             {
-                List<string> Temp = new List<string>();
-                Temp.Add(read[0].ToString());
-                Temp.Add(read[1].ToString());
-                Temp.Add(read[2].ToString());
-                Arr.Add(Temp);
+                if (read[4].ToString() == "True")
+                {
+                    List<string> Temp = new List<string>();
+                    Temp.Add(read[0].ToString());
+                    Temp.Add(read[1].ToString());
+                    Arr.Add(Temp);
+                }
+                else
+                {
+                    Console.WriteLine("Zaki sucks" + read[4].ToString());
+                }
             }
             con.Close();
             return Arr;
@@ -140,4 +160,5 @@ namespace CIS375Project.classes
                
           }
      }
+
 }
