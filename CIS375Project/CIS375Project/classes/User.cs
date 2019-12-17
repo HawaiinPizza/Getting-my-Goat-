@@ -100,12 +100,13 @@ namespace CIS375Project.classes
                OleDbCommand cmd = con.CreateCommand();
                con.Open();
 
-               cmd.CommandText = "UPDATE [User] SET Lname=@lname, Fname=@fname,  dept_id="+c.DeptID +"  WHERE user_id=@user_id";
+               cmd.CommandText = "UPDATE [User] SET Lname=@lname, Fname=@fname WHERE user_id=@user_id";
                cmd.Connection = con;
 
                cmd.Parameters.AddWithValue("@lname", c.Lname);
                cmd.Parameters.AddWithValue("@fname", c.Fname);
                cmd.Parameters.AddWithValue("@user_id", c.UserID);
+             
 
                cmd.Connection = con;
                cmd.ExecuteNonQuery();
