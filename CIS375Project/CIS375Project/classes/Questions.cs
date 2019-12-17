@@ -17,6 +17,7 @@ namespace CIS375Project.classes
           public string Question { get; set; }
           public string Answer { get; set; }
           public string Reason { get; set; }
+          public string Evidence { get; set; }
           public int S_id { get; set; }
 
           static string Connstring = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
@@ -41,7 +42,8 @@ namespace CIS375Project.classes
           {
                OleDbConnection con = new OleDbConnection(Connstring);
                OleDbCommand cmd = con.CreateCommand();
-               cmd.CommandText = "UPDATE Questions SET question=@question, answer='', reason='', evidence='' WHERE question_num=@question_id ";
+               cmd.CommandText = "UPDATE Questions SET question=@question, answer='', reason='', Evidence='' WHERE question_num=@question_id ";
+
                cmd.Connection = con;
 
                cmd.Parameters.AddWithValue("@question", question);
@@ -57,13 +59,14 @@ namespace CIS375Project.classes
                OleDbCommand cmd = con.CreateCommand();
                con.Open();
 
-               cmd.CommandText = "INSERT INTO Questions(answer, reason) VALUES(@answer, @reason)";
+               cmd.CommandText = "UPDATE Questions SET  answer=@answer, reason=@reason, Evidence=@evidence WHERE question_num=@question_id ";
                cmd.Connection = con;
 
                cmd.Parameters.AddWithValue("@answer", c.Answer);
                cmd.Parameters.AddWithValue("@reason", c.Reason);
+               cmd.Parameters.AddWithValue("@Evidence", c.Evidence);
+               cmd.Parameters.AddWithValue("@question_num", c.QuestionNum);
                cmd.Connection = con;
-               con.Open();
                cmd.ExecuteNonQuery();
                con.Close();
           }
@@ -75,7 +78,6 @@ namespace CIS375Project.classes
             con.Open();
 
              cmd.CommandText = "SELECT * FROM Questions where s_id=(SELECT s_id FROM STENER WHERE d_id=@d_id)";
-            SELECT * FROM [Questions] WHERE s_id=(SELECT s_id FROM STENER WHERE d_id=@d_id)
 
             OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
             cmd.Parameters.AddWithValue("d_id", i) ;
