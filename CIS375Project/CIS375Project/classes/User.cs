@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Configuration;
-using System.Data;
 using System.Data.OleDb;
 using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System;
+
 
 namespace CIS375Project.classes
 {
@@ -33,8 +34,9 @@ namespace CIS375Project.classes
                cmd2.Connection = con;
                cmd3.Connection = con;
                cmd4.Connection = con;
-               //this inserts the user data into the user table
-               cmd.CommandText = "INSERT INTO User(fname, lname, dept_id) VALUES(@fname, @lname, @dept_id)";
+            //this inserts the user data into the user table
+               cmd.CommandText = "INSERT INTO [User](Fname, Lname, dept_id) values(@fname, @lname, @dept_id)";
+                
                cmd.Parameters.AddWithValue("@fname", c.Fname);
                cmd.Parameters.AddWithValue("@lname", c.Lname);
                cmd.Parameters.AddWithValue("@dept_id", c.DeptID);
@@ -42,7 +44,7 @@ namespace CIS375Project.classes
                cmd.ExecuteNonQuery();
                con.Close();
                //this inserts the username and password into credentials
-               cmd2.CommandText = "INSERT INTO Credentials(username, password) VALUES(@username,@password)";
+               cmd2.CommandText = "INSERT INTO [Credentials]([username], [password]) VALUES(@username,@password)";
                cmd2.Parameters.AddWithValue("@username", c.Username);
                cmd2.Parameters.AddWithValue("@password", c.Password);
                con.Open();
@@ -52,13 +54,13 @@ namespace CIS375Project.classes
                /*so for this, it gets the user id from the recently created user
                 which then inserts that along with the created username into the table
                 that links them together, so it will work for the login function */
-               cmd3.CommandText = "SELECT MAX(user_id) FROM User";
+               cmd3.CommandText = "SELECT MAX(user_id) FROM [User]";
                con.Open();
                user_id = (Int32)cmd3.ExecuteScalar();
                con.Close();
                cmd4.CommandText = "INSERT INTO Usercredentials(u_id,username)VALUES(@u_id,@username)";
                cmd4.Parameters.AddWithValue("@u_id", user_id);
-               cmd4.Parameters.AddWithValue("username", c.Username);
+               cmd4.Parameters.AddWithValue("@username", c.Username);
                con.Open();
                cmd4.ExecuteNonQuery();
                con.Close();

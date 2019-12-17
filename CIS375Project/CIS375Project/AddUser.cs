@@ -26,6 +26,7 @@ namespace CIS375Project
                c.DeptID = Int32.Parse(dIDBox.Text);
                c.Username = UsernameBox.Text;
                c.Password = PasswordBox.Text;
+            Console.WriteLine(c.Fname+ c.Lname + c.DeptID + c.Username + c.Password);
                c.AddUser(c);
                this.Hide();
                OversightScreen FormDepart = new OversightScreen();
