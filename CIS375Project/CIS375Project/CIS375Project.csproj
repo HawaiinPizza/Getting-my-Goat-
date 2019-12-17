@@ -92,6 +92,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BRAINSDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BRAINSDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BRAINSDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="classes\Questions.cs" />
     <Compile Include="classes\STENER.cs" />
     <Compile Include="classes\User.cs" />
@@ -213,6 +218,17 @@
     </None>
     <None Include="BRAINSDataSet.xss">
       <DependentUpon>BRAINSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BRAINSDataSet1.xsc">
+      <DependentUpon>BRAINSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BRAINSDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BRAINSDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BRAINSDataSet1.xss">
+      <DependentUpon>BRAINSDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -68,6 +68,8 @@ StyleCopReport.xml
 *.ilk
 *.meta
 *.obj
+*.lock
+*.ide
 *.iobj
 *.pch
 *.pdb

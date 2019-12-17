@@ -20,6 +20,8 @@ namespace CIS375Project
 
         private void ViolationLogsOversight_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'bRAINSDataSet1.Violation_log' table. You can move, or remove it, as needed.
+            this.violation_logTableAdapter1.Fill(this.bRAINSDataSet1.Violation_log);
             // TODO: This line of code loads data into the 'bRAINSDataSet.Violation_log' table. You can move, or remove it, as needed.
             this.violation_logTableAdapter.Fill(this.bRAINSDataSet.Violation_log);
 
@@ -31,7 +33,15 @@ namespace CIS375Project
 
             NewVio.Description = DescriptionAddBox.Text;
             NewVio.DeptID = int.Parse(DeptIDBox.Text);
-            NewVio.Rating = ViolationRatingBox.Text;
+            if(ViolationRatingBox.SelectedIndex == 0)
+            {
+                NewVio.Rating = "Major";
+            }
+            else
+            {
+                NewVio.Rating = "Minor";
+            }
+            
             if(StatusBox.SelectedIndex == 0)
             {
                 NewVio.Resolved = true;
@@ -42,6 +52,20 @@ namespace CIS375Project
             }
             NewVio.ViolationID = int.Parse(VioIDBox.Text);
             NewVio.Vdate = DateTime.Parse(VioDateBox.Text);
+
+            NewVio.AddV(NewVio);
+
+
+
+        }
+
+        private void DeleteVioButton_Click(object sender, EventArgs e)
+        {
+            Violations VioToDelete = new Violations();
+
+            VioToDelete.ViolationID = int.Parse(listBox2.GetItemText(listBox2.SelectedItem));
+
+            VioToDelete.DeleteVio(VioToDelete);
 
         }
     }

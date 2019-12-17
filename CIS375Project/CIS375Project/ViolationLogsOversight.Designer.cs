@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.label6 = new System.Windows.Forms.Label();
             this.ViolationRatingBox = new System.Windows.Forms.ListBox();
+            this.violationLogBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bRAINSDataSet = new CIS375Project.BRAINSDataSet();
+            this.violationLogBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.bRAINSDataSet1 = new CIS375Project.BRAINSDataSet1();
             this.label5 = new System.Windows.Forms.Label();
             this.listBox5 = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,8 +45,6 @@
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.bRAINSDataSet = new CIS375Project.BRAINSDataSet();
-            this.violationLogBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.violation_logTableAdapter = new CIS375Project.BRAINSDataSetTableAdapters.Violation_logTableAdapter();
             this.DescriptionAddBox = new System.Windows.Forms.TextBox();
             this.VioIDBox = new System.Windows.Forms.MaskedTextBox();
@@ -51,8 +53,14 @@
             this.AddVioButton = new System.Windows.Forms.Button();
             this.StatusBox = new System.Windows.Forms.ListBox();
             this.RatingBox = new System.Windows.Forms.ListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.bRAINSDataSet)).BeginInit();
+            this.violationLogBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.violation_logTableAdapter1 = new CIS375Project.BRAINSDataSet1TableAdapters.Violation_logTableAdapter();
+            this.DeleteVioButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.violationLogBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bRAINSDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.violationLogBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bRAINSDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.violationLogBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -67,15 +75,36 @@
             // ViolationRatingBox
             // 
             this.ViolationRatingBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.violationLogBindingSource, "Description", true));
-            this.ViolationRatingBox.DataSource = this.violationLogBindingSource;
+            this.ViolationRatingBox.DataSource = this.violationLogBindingSource2;
             this.ViolationRatingBox.DisplayMember = "rating";
             this.ViolationRatingBox.FormattingEnabled = true;
             this.ViolationRatingBox.ItemHeight = 16;
             this.ViolationRatingBox.Location = new System.Drawing.Point(705, 38);
             this.ViolationRatingBox.Name = "ViolationRatingBox";
+            this.ViolationRatingBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.ViolationRatingBox.Size = new System.Drawing.Size(69, 244);
             this.ViolationRatingBox.TabIndex = 22;
             this.ViolationRatingBox.ValueMember = "rating";
+            // 
+            // violationLogBindingSource
+            // 
+            this.violationLogBindingSource.DataMember = "Violation log";
+            this.violationLogBindingSource.DataSource = this.bRAINSDataSet;
+            // 
+            // bRAINSDataSet
+            // 
+            this.bRAINSDataSet.DataSetName = "BRAINSDataSet";
+            this.bRAINSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // violationLogBindingSource2
+            // 
+            this.violationLogBindingSource2.DataMember = "Violation log";
+            this.violationLogBindingSource2.DataSource = this.bRAINSDataSet1;
+            // 
+            // bRAINSDataSet1
+            // 
+            this.bRAINSDataSet1.DataSetName = "BRAINSDataSet1";
+            this.bRAINSDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label5
             // 
@@ -95,6 +124,7 @@
             this.listBox5.ItemHeight = 16;
             this.listBox5.Location = new System.Drawing.Point(496, 38);
             this.listBox5.Name = "listBox5";
+            this.listBox5.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.listBox5.Size = new System.Drawing.Size(77, 244);
             this.listBox5.TabIndex = 20;
             this.listBox5.ValueMember = "resolved";
@@ -120,7 +150,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(176, 15);
+            this.label2.Location = new System.Drawing.Point(32, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 17);
             this.label2.TabIndex = 17;
@@ -129,7 +159,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 15);
+            this.label1.Location = new System.Drawing.Point(189, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 17);
             this.label1.TabIndex = 16;
@@ -144,6 +174,7 @@
             this.listBox4.ItemHeight = 16;
             this.listBox4.Location = new System.Drawing.Point(572, 38);
             this.listBox4.Name = "listBox4";
+            this.listBox4.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.listBox4.Size = new System.Drawing.Size(136, 244);
             this.listBox4.TabIndex = 15;
             this.listBox4.ValueMember = "dept_id";
@@ -157,6 +188,7 @@
             this.listBox3.ItemHeight = 16;
             this.listBox3.Location = new System.Drawing.Point(335, 38);
             this.listBox3.Name = "listBox3";
+            this.listBox3.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.listBox3.Size = new System.Drawing.Size(163, 244);
             this.listBox3.TabIndex = 14;
             this.listBox3.ValueMember = "v_date";
@@ -168,7 +200,7 @@
             this.listBox2.DisplayMember = "violationID";
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(176, 38);
+            this.listBox2.Location = new System.Drawing.Point(23, 38);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(163, 244);
             this.listBox2.TabIndex = 13;
@@ -181,21 +213,12 @@
             this.listBox1.DisplayMember = "Description";
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(19, 38);
+            this.listBox1.Location = new System.Drawing.Point(179, 38);
             this.listBox1.Name = "listBox1";
+            this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.listBox1.Size = new System.Drawing.Size(160, 244);
             this.listBox1.TabIndex = 12;
             this.listBox1.ValueMember = "Description";
-            // 
-            // bRAINSDataSet
-            // 
-            this.bRAINSDataSet.DataSetName = "BRAINSDataSet";
-            this.bRAINSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // violationLogBindingSource
-            // 
-            this.violationLogBindingSource.DataMember = "Violation log";
-            this.violationLogBindingSource.DataSource = this.bRAINSDataSet;
             // 
             // violation_logTableAdapter
             // 
@@ -237,7 +260,7 @@
             // 
             // AddVioButton
             // 
-            this.AddVioButton.Location = new System.Drawing.Point(335, 602);
+            this.AddVioButton.Location = new System.Drawing.Point(221, 605);
             this.AddVioButton.Name = "AddVioButton";
             this.AddVioButton.Size = new System.Drawing.Size(160, 84);
             this.AddVioButton.TabIndex = 30;
@@ -262,19 +285,39 @@
             this.RatingBox.FormattingEnabled = true;
             this.RatingBox.ItemHeight = 16;
             this.RatingBox.Items.AddRange(new object[] {
-            "Severe",
-            "Moderate",
+            "Major",
             "Minor"});
             this.RatingBox.Location = new System.Drawing.Point(705, 411);
             this.RatingBox.Name = "RatingBox";
             this.RatingBox.Size = new System.Drawing.Size(69, 36);
             this.RatingBox.TabIndex = 32;
             // 
+            // violationLogBindingSource1
+            // 
+            this.violationLogBindingSource1.DataMember = "Violation log";
+            this.violationLogBindingSource1.DataSource = this.bRAINSDataSet;
+            // 
+            // violation_logTableAdapter1
+            // 
+            this.violation_logTableAdapter1.ClearBeforeFill = true;
+            // 
+            // DeleteVioButton
+            // 
+            this.DeleteVioButton.Location = new System.Drawing.Point(437, 605);
+            this.DeleteVioButton.Name = "DeleteVioButton";
+            this.DeleteVioButton.Size = new System.Drawing.Size(155, 84);
+            this.DeleteVioButton.TabIndex = 33;
+            this.DeleteVioButton.Text = "Delete Violation";
+            this.DeleteVioButton.UseVisualStyleBackColor = true;
+            this.DeleteVioButton.Click += new System.EventHandler(this.DeleteVioButton_Click);
+            // 
             // ViolationLogsOversight
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.ClientSize = new System.Drawing.Size(823, 716);
+            this.Controls.Add(this.DeleteVioButton);
             this.Controls.Add(this.RatingBox);
             this.Controls.Add(this.StatusBox);
             this.Controls.Add(this.AddVioButton);
@@ -297,8 +340,11 @@
             this.Name = "ViolationLogsOversight";
             this.Text = "ViolationLogsOversight";
             this.Load += new System.EventHandler(this.ViolationLogsOversight_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bRAINSDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.violationLogBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bRAINSDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.violationLogBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bRAINSDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.violationLogBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -328,5 +374,10 @@
         private System.Windows.Forms.Button AddVioButton;
         private System.Windows.Forms.ListBox StatusBox;
         private System.Windows.Forms.ListBox RatingBox;
+        private System.Windows.Forms.BindingSource violationLogBindingSource1;
+        private BRAINSDataSet1 bRAINSDataSet1;
+        private System.Windows.Forms.BindingSource violationLogBindingSource2;
+        private BRAINSDataSet1TableAdapters.Violation_logTableAdapter violation_logTableAdapter1;
+        private System.Windows.Forms.Button DeleteVioButton;
     }
 }
