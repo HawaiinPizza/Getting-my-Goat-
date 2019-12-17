@@ -25,7 +25,6 @@ C:\Users\Kevin\Documents\GitHub\Getting-my-Goat-\CIS375Project\CIS375Project\bin
 C:\Users\Kevin\Documents\GitHub\Getting-my-Goat-\CIS375Project\CIS375Project\bin\Debug\CIS375Project.pdb
 C:\Users\Kevin\Documents\GitHub\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.csprojAssemblyReference.cache
 C:\Users\Kevin\Documents\GitHub\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.DepartmentScreen.resources
-C:\Users\Kevin\Documents\GitHub\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.LoginScreen.resources
 C:\Users\Kevin\Documents\GitHub\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.OversightScreen.resources
 C:\Users\Kevin\Documents\GitHub\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.Properties.Resources.resources
 C:\Users\Kevin\Documents\GitHub\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.csproj.GenerateResource.cache
@@ -81,3 +80,8 @@ C:\Users\Cam\source\repos\HawaiinPizza\Getting-my-Goat-\Getting-my-Goat-\CIS375P
 C:\Users\Cam\source\repos\HawaiinPizza\Getting-my-Goat-\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.csproj.GenerateResource.cache
 C:\Users\Cam\source\repos\HawaiinPizza\Getting-my-Goat-\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.exe
 C:\Users\Cam\source\repos\HawaiinPizza\Getting-my-Goat-\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.pdb
+C:\Users\Kevin\Documents\GitHub\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.DeleteUser.resources
+C:\Users\Kevin\Documents\GitHub\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.EditUser.resources
+C:\Users\Kevin\Documents\GitHub\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.SumbitStener.resources
+C:\Users\Kevin\Documents\GitHub\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.UserID.resources
+C:\Users\Kevin\Documents\GitHub\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.UpdateStener.resources
