@@ -72,6 +72,11 @@ namespace CIS375Project
             UpdateStener Temp = new UpdateStener();
             Temp.ShowDialog();
         }
+
+        private void OversightScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

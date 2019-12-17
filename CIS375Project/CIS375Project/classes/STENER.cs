@@ -113,6 +113,63 @@ namespace CIS375Project.classes
             List<List<string>> Arr = new List<List<string>>();
             while (read.Read())
             {
+                    List<string> Temp = new List<string>();
+                    Temp.Add(read[0].ToString());
+                    Temp.Add(read[1].ToString());
+                    Arr.Add(Temp);
+            }
+            con.Close();
+            return Arr;
+               
+          }
+        // Get a list of steners to view
+          public List<List<string>> ViewF(STENER c)
+          {
+            OleDbConnection con = new OleDbConnection(Connstring);
+            OleDbCommand cmd = con.CreateCommand();
+            con.Open();
+
+            cmd.CommandText = cmd.CommandText = "SELECT * FROM STENER ";
+            OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
+            cmd.Connection = con;
+            cmd.ExecuteNonQuery();
+            OleDbDataReader read = cmd.ExecuteReader();
+
+            List<List<string>> Arr = new List<List<string>>();
+            while (read.Read())
+            {
+                if (read[4].ToString() == "False")
+                {
+                    List<string> Temp = new List<string>();
+                    Temp.Add(read[0].ToString());
+                    Temp.Add(read[1].ToString());
+                    Arr.Add(Temp);
+                }
+                else
+                {
+                    Console.WriteLine("Zaki sucks" + read[4].ToString());
+                }
+            }
+            con.Close();
+            return Arr;
+               
+          }
+        // Get a list of steners to view
+          public List<List<string>> ViewSS(STENER c)
+          {
+            OleDbConnection con = new OleDbConnection(Connstring);
+            OleDbCommand cmd = con.CreateCommand();
+            con.Open();
+
+            cmd.CommandText = cmd.CommandText = "SELECT * FROM STENER ";
+            OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
+            cmd.Connection = con;
+            cmd.ExecuteNonQuery();
+            OleDbDataReader read = cmd.ExecuteReader();
+
+            List<List<string>> Arr = new List<List<string>>();
+            while (read.Read())
+            {
                 if (read[4].ToString() == "True")
                 {
                     List<string> Temp = new List<string>();

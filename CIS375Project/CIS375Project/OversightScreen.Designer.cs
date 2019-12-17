@@ -123,6 +123,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "OversightScreen";
             this.Text = "Oversight";
+            this.Load += new System.EventHandler(this.OversightScreen_Load);
             this.ResumeLayout(false);
 
         }

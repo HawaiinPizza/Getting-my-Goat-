@@ -993,8 +993,7 @@ namespace CIS375Project.BRAINSDataSet1TableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Description, violationID, v_date, resolved, dept_id, rating FROM [Violatio" +
-                "n log]";
+            this._commandCollection[0].CommandText = "SELECT Description, violationID, v_date, resolved, dept_id, rating FROM [Violationlog]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1033,7 +1032,7 @@ namespace CIS375Project.BRAINSDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(BRAINSDataSet1 dataSet) {
-            return this.Adapter.Update(dataSet, "Violation log");
+            return this.Adapter.Update(dataSet, "Violationlog");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

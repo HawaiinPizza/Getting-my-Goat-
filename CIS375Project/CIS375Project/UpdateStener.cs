@@ -20,7 +20,7 @@ namespace CIS375Project
             InitializeComponent();
             STENER c = new STENER();
             listBox1.Items.Add("Department\tStener");
-            List<List<string>> Arr  = c.ViewS(c);
+            List<List<string>> Arr  = c.ViewF(c);
             foreach (List<string> ArrInner in Arr) {
                 listBox1.Items.Add(ArrInner[0] +"\t" + ArrInner[1] );
             }
