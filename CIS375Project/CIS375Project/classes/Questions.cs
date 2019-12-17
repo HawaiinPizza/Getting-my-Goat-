@@ -37,6 +37,22 @@ namespace CIS375Project.classes
                cmd.ExecuteNonQuery();
                con.Close();
           }
+          public void UpdateQ(Questions c, string question, string id)
+          {
+               OleDbConnection con = new OleDbConnection(Connstring);
+               OleDbCommand cmd = con.CreateCommand();
+
+
+                cmd.CommandText = "UPDATE Questions SET question=@question, answer='', reason='' WHERE question_num=@question_id ";
+               cmd.Connection = con;
+
+               cmd.Parameters.AddWithValue("@question", question);
+               cmd.Parameters.AddWithValue("@s_id",id);
+               cmd.Connection = con;
+               con.Open();
+               cmd.ExecuteNonQuery();
+               con.Close();
+          }
           public void InsertAnswer(Questions c)
           {
                OleDbConnection con = new OleDbConnection(Connstring);
@@ -54,7 +70,7 @@ namespace CIS375Project.classes
                con.Close();
           }
           //this displays all of the questions and answers for a certain STENER
-            public List<string> DisplayQandA(Questions c, int i)
+            public List<List<string>> DisplayQandA(Questions c, int i)
             {
             OleDbConnection con = new OleDbConnection(Connstring);
             OleDbCommand cmd = con.CreateCommand();
@@ -69,14 +85,15 @@ namespace CIS375Project.classes
             cmd.ExecuteNonQuery();
             OleDbDataReader read = cmd.ExecuteReader();
 
-            List<string> Arr = new List<string>();
+            List<List<string>> Arr = new List<List<string>>();
             while (read.Read())
             {
-                string Temp="";
-
-                Temp +=
-                    read[0].ToString() + ":\t"+  read[1].ToString() + ":\t"+read[2].ToString() + "\n" ;
-
+                List<string> Temp = new List<string>();
+                Temp.Add(read[0].ToString());
+                Temp.Add(read[1].ToString());
+                Temp.Add(read[2].ToString());
+                Temp.Add(read[4].ToString());
+                Temp.Add(read[5].ToString());
                 Arr.Add(Temp);
             }
 

@@ -43,13 +43,13 @@ namespace CIS375Project
         {
 
             Questions form = new Questions();
-            List<string> Arr=form.DisplayQandA(form, listBox1.SelectedIndex);
-            string str = "";
-            foreach(string Str in Arr)
+            List<List<string>> Arr=form.DisplayQandA(form, listBox1.SelectedIndex);
+            string STR = "";
+            foreach(List<string> Str in Arr)
             {
-                str += Str;
+                STR += Str[0] + "\t" + Str[1] + "\t" + Str[2] + "\n";
             }
-            MessageBox.Show(str);
+                MessageBox.Show("Questions from\n" + STR);
 
 
 
