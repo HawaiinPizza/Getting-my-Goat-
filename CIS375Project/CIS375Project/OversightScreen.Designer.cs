@@ -39,7 +39,7 @@
             // 
             // UILogout
             // 
-            this.UILogout.Location = new System.Drawing.Point(524, 12);
+            this.UILogout.Location = new System.Drawing.Point(341, 21);
             this.UILogout.Name = "UILogout";
             this.UILogout.Size = new System.Drawing.Size(222, 41);
             this.UILogout.TabIndex = 2;
@@ -49,7 +49,7 @@
             // 
             // UIBtnAddSTENER
             // 
-            this.UIBtnAddSTENER.Location = new System.Drawing.Point(252, 90);
+            this.UIBtnAddSTENER.Location = new System.Drawing.Point(59, 100);
             this.UIBtnAddSTENER.Name = "UIBtnAddSTENER";
             this.UIBtnAddSTENER.Size = new System.Drawing.Size(159, 161);
             this.UIBtnAddSTENER.TabIndex = 4;
@@ -59,7 +59,7 @@
             // 
             // UIBtnUpdateSTENER
             // 
-            this.UIBtnUpdateSTENER.Location = new System.Drawing.Point(44, 299);
+            this.UIBtnUpdateSTENER.Location = new System.Drawing.Point(59, 315);
             this.UIBtnUpdateSTENER.Name = "UIBtnUpdateSTENER";
             this.UIBtnUpdateSTENER.Size = new System.Drawing.Size(159, 161);
             this.UIBtnUpdateSTENER.TabIndex = 5;
@@ -69,7 +69,7 @@
             // 
             // UIBtnApproveSTENER
             // 
-            this.UIBtnApproveSTENER.Location = new System.Drawing.Point(446, 90);
+            this.UIBtnApproveSTENER.Location = new System.Drawing.Point(341, 100);
             this.UIBtnApproveSTENER.Name = "UIBtnApproveSTENER";
             this.UIBtnApproveSTENER.Size = new System.Drawing.Size(159, 161);
             this.UIBtnApproveSTENER.TabIndex = 7;
@@ -79,7 +79,7 @@
             // 
             // UIBtnviewViolations
             // 
-            this.UIBtnviewViolations.Location = new System.Drawing.Point(446, 299);
+            this.UIBtnviewViolations.Location = new System.Drawing.Point(341, 315);
             this.UIBtnviewViolations.Name = "UIBtnviewViolations";
             this.UIBtnviewViolations.Size = new System.Drawing.Size(159, 161);
             this.UIBtnviewViolations.TabIndex = 8;
@@ -89,7 +89,7 @@
             // 
             // UIBtnUserMangment
             // 
-            this.UIBtnUserMangment.Location = new System.Drawing.Point(639, 90);
+            this.UIBtnUserMangment.Location = new System.Drawing.Point(589, 106);
             this.UIBtnUserMangment.Name = "UIBtnUserMangment";
             this.UIBtnUserMangment.Size = new System.Drawing.Size(107, 370);
             this.UIBtnUserMangment.TabIndex = 9;
@@ -99,7 +99,7 @@
             // 
             // AddQBtn
             // 
-            this.AddQBtn.Location = new System.Drawing.Point(208, 12);
+            this.AddQBtn.Location = new System.Drawing.Point(59, 11);
             this.AddQBtn.Margin = new System.Windows.Forms.Padding(2);
             this.AddQBtn.Name = "AddQBtn";
             this.AddQBtn.Size = new System.Drawing.Size(241, 60);

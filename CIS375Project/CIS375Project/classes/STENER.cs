@@ -56,6 +56,21 @@ namespace CIS375Project.classes
                con.Close();
           }
 
+          public void Iwish(STENER c)
+          {
+               OleDbConnection con = new OleDbConnection(Connstring);
+               OleDbCommand cmd = con.CreateCommand();
+              
+
+               cmd.CommandText = "DELETE FROM STENER WHERE s_id=@s_id";
+               cmd.Connection = con;
+
+               cmd.Parameters.AddWithValue("@s_id", c.S_id);
+               cmd.Connection = con;
+               con.Open();
+               cmd.ExecuteNonQuery();
+               con.Close();
+          }
           public void Sumbit(STENER c, int i)
           {
                OleDbConnection con = new OleDbConnection(Connstring);

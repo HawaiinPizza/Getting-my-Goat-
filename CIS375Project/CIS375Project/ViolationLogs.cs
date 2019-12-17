@@ -25,5 +25,15 @@ namespace CIS375Project
             this.violation_logTableAdapter.Fill(this.bRAINSDataSet.Violation_log);
 
         }
+
+        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void violationLogBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

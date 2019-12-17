@@ -67,6 +67,8 @@ namespace CIS375Project.classes
 
 
           }
+
+
           //editing a user that has already been created
           public List<List<string>> GetUser(User c)
         {

@@ -26,9 +26,9 @@ namespace CIS375Project
         {
             //Check in database function (IDK how the database is going to work, or even what it's going to upload. So I'll pretend it does something ehre.
             int UserStatus = dept; //This would be int UserStatus = Database.UserCheck(user, password);
-            if (UserStatus > 1)
+            if (UserStatus >= 1)
             {
-                UserStatus = 0;
+                UserStatus = 1;
             }
             
             switch (UserStatus)
@@ -38,22 +38,19 @@ namespace CIS375Project
                     UIUserLoginButton.Text = ("Wrong password.  Try again");
                     break;
                 // User is department
-                case 0:
+                case 1:
                     this.Hide();
                     DepartmentScreen FormDepart = new DepartmentScreen();
                     FormDepart.ShowDialog();
                     //this.Show();
                     //Application.Exit();
                     break;
+                default:
                 // User is oversight
-                case 1:
                     this.Hide();
                     OversightScreen FormOver = new OversightScreen();
                     FormOver.ShowDialog();
                     //Application.Exit();
-                    break;
-                default:
-                    UIUserLoginButton.Text = ("A critical bug has happen");
                     break;
 
             }
