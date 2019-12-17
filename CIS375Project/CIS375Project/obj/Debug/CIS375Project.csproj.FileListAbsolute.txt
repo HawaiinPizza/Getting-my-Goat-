@@ -55,3 +55,8 @@ C:\Users\omuna\Source\Repos\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Deb
 C:\Users\omuna\Source\Repos\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.csproj.GenerateResource.cache
 C:\Users\omuna\Source\Repos\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.exe
 C:\Users\omuna\Source\Repos\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.pdb
+C:\Users\Kevin\Documents\GitHub\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.ApproveStener.resources
+C:\Users\Kevin\Documents\GitHub\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.ViolationLogs.resources
+C:\Users\Kevin\Documents\GitHub\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.ViolationLogsOversight.resources
+C:\Users\Kevin\Documents\GitHub\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.AddSTENER.resources
+C:\Users\Kevin\Documents\GitHub\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.AddQuestion.resources

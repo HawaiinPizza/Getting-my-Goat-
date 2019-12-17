@@ -25,9 +25,9 @@ namespace CIS375Project.classes
           {
                OleDbConnection con = new OleDbConnection(Connstring);
                OleDbCommand cmd = con.CreateCommand();
-               con.Open();
+              
 
-               cmd.CommandText = "INSERT INTO Questions(question_num, question, s_id) VALUES(NULL, @question, @s_id)";
+               cmd.CommandText = "INSERT INTO Questions(question, s_id) VALUES(@question, @s_id)";
                cmd.Connection = con;
 
                cmd.Parameters.AddWithValue("@question", c.Question);
@@ -54,23 +54,34 @@ namespace CIS375Project.classes
                con.Close();
           }
           //this displays all of the questions and answers for a certain STENER
-          public void DisplayQandA(Questions c)
+          public List<string> DisplayQandA(Questions c, int i)
           {
-               OleDbConnection con = new OleDbConnection(Connstring);
-               OleDbCommand cmd = con.CreateCommand();
-               DataTable dt = new DataTable();
-               con.Open();
+            OleDbConnection con = new OleDbConnection(Connstring);
+            OleDbCommand cmd = con.CreateCommand();
+            DataTable dt = new DataTable();
+            con.Open();
 
-               cmd.CommandText = cmd.CommandText = "SELECT * FROM [STENER] contents X, Questions Y WHERE X.s_id=@s_id AND X.question_num=Y.question_num";
-               OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
-               cmd.Connection = con;
-               adapter.Fill(dt);
+            cmd.CommandText = cmd.CommandText = "SELECT Y.* FROM STENERcontents X, Questions Y WHERE X.s_id=@s_id AND X.question_num=Y.question_num";
+            cmd.Parameters.AddWithValue("@s_id", i);
+            OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
+            cmd.Connection = con;
+            adapter.Fill(dt);
+            cmd.ExecuteNonQuery();
+            OleDbDataReader read = cmd.ExecuteReader();
 
-               cmd.Parameters.AddWithValue("@s_id", c.S_id);
-               cmd.Connection = con;
-               con.Open();
-               cmd.ExecuteNonQuery();
-               con.Close();
+            List<string> Arr = new List<string>();
+            while (read.Read())
+            {
+                string Temp="";
+
+                Temp +=
+                    read[0].ToString() + ":\t"+  read[1].ToString() + ":\t"+read[2].ToString() + ":\t"+read[3].ToString() + ":\t"+read[5].ToString() + "\n" ;
+
+                Arr.Add(Temp);
+            }
+
+            con.Close();
+            return Arr;
           }
 
      }
