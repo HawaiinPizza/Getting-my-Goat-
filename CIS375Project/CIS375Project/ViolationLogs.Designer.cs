@@ -44,8 +44,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.listBox6 = new System.Windows.Forms.ListBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.bRAINSDataSet1 = new CIS375Project.BRAINSDataSet1();
+            this.bRAINSDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.violationLogBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.violation_logTableAdapter1 = new CIS375Project.BRAINSDataSet1TableAdapters.Violation_logTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.violationLogBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bRAINSDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bRAINSDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bRAINSDataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.violationLogBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // listBox1
@@ -57,6 +64,7 @@
             this.listBox1.ItemHeight = 16;
             this.listBox1.Location = new System.Drawing.Point(12, 56);
             this.listBox1.Name = "listBox1";
+            this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.listBox1.Size = new System.Drawing.Size(160, 244);
             this.listBox1.TabIndex = 0;
             this.listBox1.ValueMember = "Description";
@@ -80,6 +88,7 @@
             this.listBox2.ItemHeight = 16;
             this.listBox2.Location = new System.Drawing.Point(169, 56);
             this.listBox2.Name = "listBox2";
+            this.listBox2.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.listBox2.Size = new System.Drawing.Size(163, 244);
             this.listBox2.TabIndex = 1;
             this.listBox2.ValueMember = "violationID";
@@ -93,6 +102,7 @@
             this.listBox3.ItemHeight = 16;
             this.listBox3.Location = new System.Drawing.Point(328, 56);
             this.listBox3.Name = "listBox3";
+            this.listBox3.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.listBox3.Size = new System.Drawing.Size(163, 244);
             this.listBox3.TabIndex = 2;
             this.listBox3.ValueMember = "v_date";
@@ -106,6 +116,7 @@
             this.listBox4.ItemHeight = 16;
             this.listBox4.Location = new System.Drawing.Point(565, 56);
             this.listBox4.Name = "listBox4";
+            this.listBox4.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.listBox4.Size = new System.Drawing.Size(136, 244);
             this.listBox4.TabIndex = 3;
             this.listBox4.ValueMember = "dept_id";
@@ -159,6 +170,7 @@
             this.listBox5.ItemHeight = 16;
             this.listBox5.Location = new System.Drawing.Point(489, 56);
             this.listBox5.Name = "listBox5";
+            this.listBox5.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.listBox5.Size = new System.Drawing.Size(77, 244);
             this.listBox5.TabIndex = 8;
             this.listBox5.ValueMember = "resolved";
@@ -175,12 +187,13 @@
             // listBox6
             // 
             this.listBox6.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.violationLogBindingSource, "Description", true));
-            this.listBox6.DataSource = this.violationLogBindingSource;
+            this.listBox6.DataSource = this.violationLogBindingSource1;
             this.listBox6.DisplayMember = "rating";
             this.listBox6.FormattingEnabled = true;
             this.listBox6.ItemHeight = 16;
             this.listBox6.Location = new System.Drawing.Point(698, 56);
             this.listBox6.Name = "listBox6";
+            this.listBox6.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.listBox6.Size = new System.Drawing.Size(69, 244);
             this.listBox6.TabIndex = 10;
             this.listBox6.ValueMember = "rating";
@@ -193,6 +206,25 @@
             this.label6.Size = new System.Drawing.Size(49, 17);
             this.label6.TabIndex = 11;
             this.label6.Text = "Rating";
+            // 
+            // bRAINSDataSet1
+            // 
+            this.bRAINSDataSet1.DataSetName = "BRAINSDataSet1";
+            this.bRAINSDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bRAINSDataSet1BindingSource
+            // 
+            this.bRAINSDataSet1BindingSource.DataSource = this.bRAINSDataSet1;
+            this.bRAINSDataSet1BindingSource.Position = 0;
+            // 
+            // violationLogBindingSource1
+            // 
+            this.violationLogBindingSource1.DataMember = "Violation log";
+            this.violationLogBindingSource1.DataSource = this.bRAINSDataSet1BindingSource;
+            // 
+            // violation_logTableAdapter1
+            // 
+            this.violation_logTableAdapter1.ClearBeforeFill = true;
             // 
             // ViolationLogs
             // 
@@ -216,6 +248,9 @@
             this.Load += new System.EventHandler(this.ViolationLogs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.violationLogBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bRAINSDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bRAINSDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bRAINSDataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.violationLogBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,5 +273,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListBox listBox6;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.BindingSource bRAINSDataSet1BindingSource;
+        private BRAINSDataSet1 bRAINSDataSet1;
+        private System.Windows.Forms.BindingSource violationLogBindingSource1;
+        private BRAINSDataSet1TableAdapters.Violation_logTableAdapter violation_logTableAdapter1;
     }
 }

@@ -19,6 +19,8 @@ namespace CIS375Project
 
         private void ViolationLogs_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'bRAINSDataSet1.Violation_log' table. You can move, or remove it, as needed.
+            this.violation_logTableAdapter1.Fill(this.bRAINSDataSet1.Violation_log);
             // TODO: This line of code loads data into the 'bRAINSDataSet.Violation_log' table. You can move, or remove it, as needed.
             this.violation_logTableAdapter.Fill(this.bRAINSDataSet.Violation_log);
 
