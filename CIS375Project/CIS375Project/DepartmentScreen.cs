@@ -28,5 +28,12 @@ namespace CIS375Project
             LoginScreen FormDepart = new LoginScreen();
             FormDepart.ShowDialog();
         }
+
+        private void ButtonViolation_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ViolationLogs VioLog = new ViolationLogs();
+          VioLog.ShowDialog();
+        }
     }
 }

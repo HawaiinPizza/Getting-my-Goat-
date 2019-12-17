@@ -14,9 +14,9 @@ namespace CIS375Project.classes
      {
           public string Username { get; set; }
           public string Password { get; set; }
-        string Conn = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\fru\Source\repos\FuckHoes\BRAINS.accdb";
-          //this function will return a bool, true if the credentials match, false if they dont
-          StringBuilder errorMessages = new StringBuilder();
+        string Conn = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
+        //this function will return a bool, true if the credentials match, false if they dont
+        StringBuilder errorMessages = new StringBuilder();
           public bool Credentials(Login c)
           {
                //this is for retrieving the credentials from the database

@@ -34,7 +34,7 @@ namespace CIS375Project
                     UIUserLoginButton.Text = ("Wrong password.  Try again");
                     break;
                 // User is department
-                case 1:
+                case 0:
                     this.Hide();
                     DepartmentScreen FormDepart = new DepartmentScreen();
                     FormDepart.ShowDialog();
@@ -42,7 +42,7 @@ namespace CIS375Project
                     //Application.Exit();
                     break;
                 // User is oversight
-                case 0:
+                case 1:
                     this.Hide();
                     OversightScreen FormOver = new OversightScreen();
                     FormOver.ShowDialog();
@@ -64,6 +64,7 @@ namespace CIS375Project
             //takes in the user in put and send it to the class functions
             c.Password = PasswordBox.Text;
             c.Username = UserNameBox.Text;
+            
             bool good = c.Credentials(c);
             //if the credentials match then it sends to the department choosing
             if (good == true)

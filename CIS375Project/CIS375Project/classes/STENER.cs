@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -17,27 +18,42 @@ namespace CIS375Project.classes
           //creating a new STENER
           public void CreateS(STENER c)
           {
-               SqlConnection connection = new SqlConnection(Connstring);
-               string sql = "INSERT INTO STENER(s_id,dept_id) VALUES(NULL, @dept_id)";
-               SqlCommand cmd = new SqlCommand(sql, connection);
+               OleDbConnection con = new OleDbConnection(Connstring);
+               OleDbCommand cmd = con.CreateCommand();
+               con.Open();
+
+               cmd.CommandText = "INSERT INTO STENER(d_id) VALUES(@dept_id)";
+               cmd.Connection = con;
+
                //insert value
-               cmd.Parameters.AddWithValue("@dept_id", c.D_id);
-               cmd.Connection = connection;
-               connection.Open();
+               cmd.Parameters.AddWithValue("@d_id", c.D_id);
+               cmd.Connection = con;
+               con.Open();
                cmd.ExecuteNonQuery();
-               connection.Close();
+               con.Close();
           }
           public void DeleteS(STENER c)
           {
-               SqlConnection connection = new SqlConnection(Connstring);
-               string sql = "DELETE FROM STENER WHERE s_id=@s_id";
-               SqlCommand cmd = new SqlCommand(sql, connection);
-               cmd.Parameters.AddWithValue("@s_id", c.S_id);
-               cmd.Connection = connection;
-               connection.Open();
-               cmd.ExecuteNonQuery();
-               connection.Close();
-          }
+               OleDbConnection con = new OleDbConnection(Connstring);
+               OleDbCommand cmd = con.CreateCommand();
+               con.Open();
 
+               cmd.CommandText = "DELETE FROM STENER WHERE s_id=@s_id";
+               cmd.Connection = con;
+
+               cmd.Parameters.AddWithValue("@s_id", c.S_id);
+               cmd.Connection = con;
+               con.Open();
+               cmd.ExecuteNonQuery();
+               con.Close();
+          }
+          public void ViewS(STENER c)
+          {
+               OleDbConnection con = new OleDbConnection(Connstring);
+               OleDbCommand cmd = con.CreateCommand();
+               con.Open();
+
+               
+          }
      }
 }
