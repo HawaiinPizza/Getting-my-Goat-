@@ -109,15 +109,19 @@
     <Compile Include="ApproveStener.Designer.cs">
       <DependentUpon>ApproveStener.cs</DependentUpon>
     </Compile>
+    <Compile Include="SumbitStener.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SumbitStener.Designer.cs">
+      <DependentUpon>SumbitStener.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateStener.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UpdateStener.Designer.cs">
       <DependentUpon>UpdateStener.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginScreen.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="LoginScreen.cs" />
     <Compile Include="LoginScreen.Designer.cs">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </Compile>
@@ -167,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ApproveStener.resx">
       <DependentUpon>ApproveStener.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SumbitStener.resx">
+      <DependentUpon>SumbitStener.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>

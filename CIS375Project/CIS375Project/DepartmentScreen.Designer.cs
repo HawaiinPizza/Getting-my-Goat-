@@ -35,10 +35,9 @@
             // 
             // ButtonViolation
             // 
-            this.ButtonViolation.Location = new System.Drawing.Point(16, 166);
-            this.ButtonViolation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ButtonViolation.Location = new System.Drawing.Point(12, 135);
             this.ButtonViolation.Name = "ButtonViolation";
-            this.ButtonViolation.Size = new System.Drawing.Size(232, 215);
+            this.ButtonViolation.Size = new System.Drawing.Size(174, 175);
             this.ButtonViolation.TabIndex = 0;
             this.ButtonViolation.Text = "Violation Logs";
             this.ButtonViolation.UseVisualStyleBackColor = true;
@@ -46,20 +45,19 @@
             // 
             // ButtonSTENER
             // 
-            this.ButtonSTENER.Location = new System.Drawing.Point(807, 166);
-            this.ButtonSTENER.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ButtonSTENER.Location = new System.Drawing.Point(605, 135);
             this.ButtonSTENER.Name = "ButtonSTENER";
-            this.ButtonSTENER.Size = new System.Drawing.Size(232, 215);
+            this.ButtonSTENER.Size = new System.Drawing.Size(174, 175);
             this.ButtonSTENER.TabIndex = 1;
             this.ButtonSTENER.Text = "Answer/Sumbit STENER";
             this.ButtonSTENER.UseVisualStyleBackColor = true;
+            this.ButtonSTENER.Click += new System.EventHandler(this.ButtonSTENER_Click);
             // 
             // ButtonLogout
             // 
-            this.ButtonLogout.Location = new System.Drawing.Point(403, 292);
-            this.ButtonLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ButtonLogout.Location = new System.Drawing.Point(302, 237);
             this.ButtonLogout.Name = "ButtonLogout";
-            this.ButtonLogout.Size = new System.Drawing.Size(291, 90);
+            this.ButtonLogout.Size = new System.Drawing.Size(218, 73);
             this.ButtonLogout.TabIndex = 2;
             this.ButtonLogout.Text = "Logout";
             this.ButtonLogout.UseVisualStyleBackColor = true;
@@ -67,13 +65,12 @@
             // 
             // DepartmentScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.ButtonLogout);
             this.Controls.Add(this.ButtonSTENER);
             this.Controls.Add(this.ButtonViolation);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DepartmentScreen";
             this.Text = "Department Screen";
             this.ResumeLayout(false);

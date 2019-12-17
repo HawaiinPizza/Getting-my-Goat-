@@ -67,6 +67,40 @@ namespace CIS375Project.classes
                cmd.ExecuteNonQuery();
                con.Close();
           }
+            public List<List<string>> DisplayQandADep(Questions c, int i)
+            {
+            OleDbConnection con = new OleDbConnection(Connstring);
+            OleDbCommand cmd = con.CreateCommand();
+            DataTable dt = new DataTable();
+            con.Open();
+
+             cmd.CommandText = "SELECT * FROM Questions where s_id=(SELECT s_id FROM STENER WHERE d_id=@d_id)";
+            SELECT * FROM [Questions] WHERE s_id=(SELECT s_id FROM STENER WHERE d_id=@d_id)
+
+            OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
+            cmd.Parameters.AddWithValue("d_id", i) ;
+            cmd.Connection = con;
+            adapter.Fill(dt);
+            cmd.ExecuteNonQuery();
+            OleDbDataReader read = cmd.ExecuteReader();
+
+            List<List<string>> Arr = new List<List<string>>();
+            while (read.Read())
+            {
+                List<string> Temp = new List<string>();
+                Temp.Add(read[0].ToString());
+                Temp.Add(read[1].ToString());
+                Temp.Add(read[2].ToString());
+                Temp.Add(read[4].ToString());
+                Temp.Add(read[5].ToString());
+                Temp.Add(read[6].ToString());
+                Arr.Add(Temp);
+            }
+
+
+            con.Close();
+            return Arr;
+          }
           //this displays all of the questions and answers for a certain STENER
             public List<List<string>> DisplayQandA(Questions c, int i)
             {

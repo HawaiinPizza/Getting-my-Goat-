@@ -42,14 +42,15 @@ namespace CIS375Project
         private void listBox1_MouseDown(object sender, MouseEventArgs e)
         {
 
+            listBox2.Items.Clear();
             Questions form = new Questions();
             List<List<string>> Arr=form.DisplayQandA(form, listBox1.SelectedIndex);
-            string STR = "";
             foreach(List<string> Str in Arr)
             {
-                STR += Str[0] + "\t" + Str[1] + "\t" + Str[2] + "\n";
+                string STR = "";
+                STR += Str[0] + "\t" + Str[1] + "\t" + Str[2] + "\t" + Str[4];
+                listBox2.Items.Add(STR);
             }
-                MessageBox.Show("Questions from\n" + STR);
 
 
 

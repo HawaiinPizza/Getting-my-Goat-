@@ -11,6 +11,10 @@ using System;
 
 namespace CIS375Project
 {
+    public static class UserID
+    {
+        public static Int32 ID;
+    }
     public partial class LoginScreen : Form
     {
         public LoginScreen()
@@ -34,7 +38,7 @@ namespace CIS375Project
                     UIUserLoginButton.Text = ("Wrong password.  Try again");
                     break;
                 // User is department
-                case 1:
+                case 0:
                     this.Hide();
                     DepartmentScreen FormDepart = new DepartmentScreen();
                     FormDepart.ShowDialog();
@@ -42,7 +46,7 @@ namespace CIS375Project
                     //Application.Exit();
                     break;
                 // User is oversight
-                case 0:
+                case 1:
                     this.Hide();
                     OversightScreen FormOver = new OversightScreen();
                     FormOver.ShowDialog();
@@ -71,6 +75,7 @@ namespace CIS375Project
             {
                 //this gets the department from the login class
                 int dept = c.GetDepartment(c);
+                UserID.ID = dept;
                 LoginUserCheck(dept);
             }
             else

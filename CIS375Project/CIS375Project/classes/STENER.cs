@@ -104,15 +104,14 @@ namespace CIS375Project.classes
           }
 
         // Get a specific
-          public List<string> GetSten(STENER c, int Sten_id, int Dep_id)
+          public List<string> GetSten(STENER c)
           {
             OleDbConnection con = new OleDbConnection(Connstring);
             OleDbCommand cmd = con.CreateCommand();
             con.Open();
 
             cmd.CommandText = "SELECT * FROM STENER WHERE s_id=X AND d_id=Y";
-            cmd.Parameters.AddWithValue("X", Sten_id);
-            cmd.Parameters.AddWithValue("Y", Dep_id);
+            cmd.Parameters.AddWithValue("Y", c.D_id);
 
             OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
             cmd.Connection = con;
@@ -126,7 +125,6 @@ namespace CIS375Project.classes
 
                 Temp +=
                     read[0].ToString() +":\t\t" + read[1].ToString() +":\t\t" + read[2].ToString() ;
-                Console.WriteLine(Temp, Sten_id, Dep_id);
 
                 Arr.Add(Temp);
             }

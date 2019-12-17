@@ -35,5 +35,13 @@ namespace CIS375Project
             ViolationLogs VioLog = new ViolationLogs();
           VioLog.ShowDialog();
         }
+
+        private void ButtonSTENER_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SumbitStener Temp = new SumbitStener();
+            Temp.ShowDialog();
+
+        }
     }
 }
