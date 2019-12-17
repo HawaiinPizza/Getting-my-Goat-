@@ -62,7 +62,7 @@ namespace CIS375Project
                 }
                 else
                 {
-                    Change.UpdateQ(Change, textBox1.Text, Arr[listBox2.SelectedIndex][4]);
+                    Change.UpdateQ(Change, textBox1.Text, Arr[listBox2.SelectedIndex][5]);
                 }
             }
         }
@@ -71,7 +71,6 @@ namespace CIS375Project
         {
             Questions Q = new Questions();
              Arr=Q.DisplayQandA(Q, listBox1.SelectedIndex);
-            MessageBox.Show(Arr[0][4]);
             listBox2.Items.Clear();
             foreach (List<string> ArrInner in Arr){
                 listBox2.Items.Add(ArrInner[0] +"\t" + ArrInner[1] + "\t" + ArrInner[2] + "\t" + ArrInner[3] + "\t" + ArrInner[4]);

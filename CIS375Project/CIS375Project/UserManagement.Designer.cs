@@ -28,50 +28,55 @@
           /// </summary>
           private void InitializeComponent()
           {
-               this.AddUserBox = new System.Windows.Forms.Button();
-               this.EditUserBox = new System.Windows.Forms.Button();
-               this.DeleteUserBox = new System.Windows.Forms.Button();
-               this.SuspendLayout();
-               // 
-               // AddUserBox
-               // 
-               this.AddUserBox.Location = new System.Drawing.Point(38, 122);
-               this.AddUserBox.Name = "AddUserBox";
-               this.AddUserBox.Size = new System.Drawing.Size(221, 159);
-               this.AddUserBox.TabIndex = 0;
-               this.AddUserBox.Text = "Add User";
-               this.AddUserBox.UseVisualStyleBackColor = true;
-               this.AddUserBox.Click += new System.EventHandler(this.AddUserBox_Click);
-               // 
-               // EditUserBox
-               // 
-               this.EditUserBox.Location = new System.Drawing.Point(298, 122);
-               this.EditUserBox.Name = "EditUserBox";
-               this.EditUserBox.Size = new System.Drawing.Size(221, 159);
-               this.EditUserBox.TabIndex = 1;
-               this.EditUserBox.Text = "Edit User";
-               this.EditUserBox.UseVisualStyleBackColor = true;
-               // 
-               // DeleteUserBox
-               // 
-               this.DeleteUserBox.Location = new System.Drawing.Point(551, 122);
-               this.DeleteUserBox.Name = "DeleteUserBox";
-               this.DeleteUserBox.Size = new System.Drawing.Size(221, 159);
-               this.DeleteUserBox.TabIndex = 2;
-               this.DeleteUserBox.Text = "Delete User";
-               this.DeleteUserBox.UseVisualStyleBackColor = true;
-               // 
-               // UserManagement
-               // 
-               this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-               this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-               this.ClientSize = new System.Drawing.Size(800, 450);
-               this.Controls.Add(this.DeleteUserBox);
-               this.Controls.Add(this.EditUserBox);
-               this.Controls.Add(this.AddUserBox);
-               this.Name = "UserManagement";
-               this.Text = "UserManagement";
-               this.ResumeLayout(false);
+            this.AddUserBox = new System.Windows.Forms.Button();
+            this.EditUserBox = new System.Windows.Forms.Button();
+            this.DeleteUserBox = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // AddUserBox
+            // 
+            this.AddUserBox.Location = new System.Drawing.Point(25, 79);
+            this.AddUserBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddUserBox.Name = "AddUserBox";
+            this.AddUserBox.Size = new System.Drawing.Size(147, 103);
+            this.AddUserBox.TabIndex = 0;
+            this.AddUserBox.Text = "Add User";
+            this.AddUserBox.UseVisualStyleBackColor = true;
+            this.AddUserBox.Click += new System.EventHandler(this.AddUserBox_Click);
+            // 
+            // EditUserBox
+            // 
+            this.EditUserBox.Location = new System.Drawing.Point(199, 79);
+            this.EditUserBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EditUserBox.Name = "EditUserBox";
+            this.EditUserBox.Size = new System.Drawing.Size(147, 103);
+            this.EditUserBox.TabIndex = 1;
+            this.EditUserBox.Text = "Edit User";
+            this.EditUserBox.UseVisualStyleBackColor = true;
+            this.EditUserBox.Click += new System.EventHandler(this.EditUserBox_Click);
+            // 
+            // DeleteUserBox
+            // 
+            this.DeleteUserBox.Location = new System.Drawing.Point(367, 79);
+            this.DeleteUserBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DeleteUserBox.Name = "DeleteUserBox";
+            this.DeleteUserBox.Size = new System.Drawing.Size(147, 103);
+            this.DeleteUserBox.TabIndex = 2;
+            this.DeleteUserBox.Text = "Delete User";
+            this.DeleteUserBox.UseVisualStyleBackColor = true;
+            // 
+            // UserManagement
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(533, 292);
+            this.Controls.Add(this.DeleteUserBox);
+            this.Controls.Add(this.EditUserBox);
+            this.Controls.Add(this.AddUserBox);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "UserManagement";
+            this.Text = "UserManagement";
+            this.ResumeLayout(false);
 
           }
 

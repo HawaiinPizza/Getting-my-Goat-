@@ -21,7 +21,7 @@ namespace CIS375Project.classes
           {
                //this is for retrieving the credentials from the database
                //SqlConnection connection = new SqlConnection(Connstring);
-                   bool match = false;
+                    bool match = false;
                     OleDbConnection con = new OleDbConnection(Conn);  
                     OleDbCommand cmd = con.CreateCommand();    
                     con.Open();

@@ -68,6 +68,31 @@ namespace CIS375Project.classes
 
           }
           //editing a user that has already been created
+          public List<List<string>> GetUser(User c)
+        {
+               OleDbConnection con = new OleDbConnection(Connstring);
+               OleDbCommand cmd = con.CreateCommand();
+               con.Open();
+
+               cmd.CommandText = "Select * FROM [USER]";
+               cmd.Connection = con;
+               cmd.ExecuteNonQuery();
+               OleDbDataReader read = cmd.ExecuteReader();
+               List<List<string>> Arr = new List<List<string>>();
+               while (read.Read())
+               {
+                List<string> Temp = new List<string>();
+                Temp.Add(read[0].ToString());
+                Temp.Add(read[1].ToString());
+                Temp.Add(read[2].ToString());
+                Temp.Add(read[3].ToString());
+                Arr.Add(Temp);
+               }
+
+               con.Close();
+            return Arr;
+
+        }
           public void EditUser(User c)
           {
 
@@ -75,15 +100,15 @@ namespace CIS375Project.classes
                OleDbCommand cmd = con.CreateCommand();
                con.Open();
 
-               cmd.CommandText = "UPDATE User SET lname=@lname, fname=@fname, user_id=@user_id, dept_id=@dept_id WHERE user_id=@user_id";
+                Console.WriteLine(c.Lname + "	" + c.Fname + "	" + c.UserID + "	" + c.DeptID);
+               cmd.CommandText = "UPDATE [User] SET Lname=Zaki, Fname=@fname,  dept_id="+c.DeptID +"  WHERE user_id=@user_id";
                cmd.Connection = con;
 
                cmd.Parameters.AddWithValue("@lname", c.Lname);
                cmd.Parameters.AddWithValue("@fname", c.Fname);
                cmd.Parameters.AddWithValue("@user_id", c.UserID);
-               cmd.Parameters.AddWithValue("@dept_id", c.DeptID);
+
                cmd.Connection = con;
-               con.Open();
                cmd.ExecuteNonQuery();
                con.Close();
           }

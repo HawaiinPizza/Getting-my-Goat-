@@ -41,9 +41,7 @@ namespace CIS375Project.classes
           {
                OleDbConnection con = new OleDbConnection(Connstring);
                OleDbCommand cmd = con.CreateCommand();
-
-
-                cmd.CommandText = "UPDATE Questions SET question=@question, answer='', reason='' WHERE question_num=@question_id ";
+               cmd.CommandText = "UPDATE Questions SET question=@question, answer='', reason='', evidence='' WHERE question_num=@question_id ";
                cmd.Connection = con;
 
                cmd.Parameters.AddWithValue("@question", question);
@@ -94,6 +92,7 @@ namespace CIS375Project.classes
                 Temp.Add(read[2].ToString());
                 Temp.Add(read[4].ToString());
                 Temp.Add(read[5].ToString());
+                Temp.Add(read[6].ToString());
                 Arr.Add(Temp);
             }
 

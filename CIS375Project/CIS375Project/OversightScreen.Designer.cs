@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             this.UILogout = new System.Windows.Forms.Button();
-            this.UIBtnRemoveSTENER = new System.Windows.Forms.Button();
             this.UIBtnAddSTENER = new System.Windows.Forms.Button();
             this.UIBtnUpdateSTENER = new System.Windows.Forms.Button();
-            this.UIBtnRejectSTENER = new System.Windows.Forms.Button();
             this.UIBtnApproveSTENER = new System.Windows.Forms.Button();
             this.UIBtnviewViolations = new System.Windows.Forms.Button();
             this.UIBtnUserMangment = new System.Windows.Forms.Button();
@@ -48,15 +46,6 @@
             this.UILogout.Text = "Logout";
             this.UILogout.UseVisualStyleBackColor = true;
             this.UILogout.Click += new System.EventHandler(this.UILogout_Click);
-            // 
-            // UIBtnRemoveSTENER
-            // 
-            this.UIBtnRemoveSTENER.Location = new System.Drawing.Point(44, 90);
-            this.UIBtnRemoveSTENER.Name = "UIBtnRemoveSTENER";
-            this.UIBtnRemoveSTENER.Size = new System.Drawing.Size(159, 161);
-            this.UIBtnRemoveSTENER.TabIndex = 3;
-            this.UIBtnRemoveSTENER.Text = "Remove STENER";
-            this.UIBtnRemoveSTENER.UseVisualStyleBackColor = true;
             // 
             // UIBtnAddSTENER
             // 
@@ -77,15 +66,6 @@
             this.UIBtnUpdateSTENER.Text = "Update STENER";
             this.UIBtnUpdateSTENER.UseVisualStyleBackColor = true;
             this.UIBtnUpdateSTENER.Click += new System.EventHandler(this.UIBtnUpdateSTENER_Click);
-            // 
-            // UIBtnRejectSTENER
-            // 
-            this.UIBtnRejectSTENER.Location = new System.Drawing.Point(252, 299);
-            this.UIBtnRejectSTENER.Name = "UIBtnRejectSTENER";
-            this.UIBtnRejectSTENER.Size = new System.Drawing.Size(159, 161);
-            this.UIBtnRejectSTENER.TabIndex = 6;
-            this.UIBtnRejectSTENER.Text = "Reject STENER";
-            this.UIBtnRejectSTENER.UseVisualStyleBackColor = true;
             // 
             // UIBtnApproveSTENER
             // 
@@ -120,7 +100,7 @@
             // AddQBtn
             // 
             this.AddQBtn.Location = new System.Drawing.Point(208, 12);
-            this.AddQBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddQBtn.Margin = new System.Windows.Forms.Padding(2);
             this.AddQBtn.Name = "AddQBtn";
             this.AddQBtn.Size = new System.Drawing.Size(241, 60);
             this.AddQBtn.TabIndex = 10;
@@ -137,12 +117,10 @@
             this.Controls.Add(this.UIBtnUserMangment);
             this.Controls.Add(this.UIBtnviewViolations);
             this.Controls.Add(this.UIBtnApproveSTENER);
-            this.Controls.Add(this.UIBtnRejectSTENER);
             this.Controls.Add(this.UIBtnUpdateSTENER);
             this.Controls.Add(this.UIBtnAddSTENER);
-            this.Controls.Add(this.UIBtnRemoveSTENER);
             this.Controls.Add(this.UILogout);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "OversightScreen";
             this.Text = "Oversight";
             this.ResumeLayout(false);
@@ -151,10 +129,8 @@
 
         #endregion
         private System.Windows.Forms.Button UILogout;
-        private System.Windows.Forms.Button UIBtnRemoveSTENER;
         private System.Windows.Forms.Button UIBtnAddSTENER;
         private System.Windows.Forms.Button UIBtnUpdateSTENER;
-        private System.Windows.Forms.Button UIBtnRejectSTENER;
         private System.Windows.Forms.Button UIBtnApproveSTENER;
         private System.Windows.Forms.Button UIBtnviewViolations;
         private System.Windows.Forms.Button UIBtnUserMangment;
