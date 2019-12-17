@@ -25,9 +25,9 @@ namespace CIS375Project.classes
           {
                OleDbConnection con = new OleDbConnection(Connstring);
                OleDbCommand cmd = con.CreateCommand();
-               con.Open();
+              
 
-               cmd.CommandText = "INSERT INTO Questions(question_num, question, s_id) VALUES(NULL, @question, @s_id)";
+               cmd.CommandText = "INSERT INTO Questions(question, s_id) VALUES(@question, @s_id)";
                cmd.Connection = con;
 
                cmd.Parameters.AddWithValue("@question", c.Question);

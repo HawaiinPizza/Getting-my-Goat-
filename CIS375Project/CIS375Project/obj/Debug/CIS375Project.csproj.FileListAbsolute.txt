@@ -59,3 +59,4 @@ C:\Users\Kevin\Documents\GitHub\Getting-my-Goat-\CIS375Project\CIS375Project\obj
 C:\Users\Kevin\Documents\GitHub\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.ViolationLogs.resources
 C:\Users\Kevin\Documents\GitHub\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.ViolationLogsOversight.resources
 C:\Users\Kevin\Documents\GitHub\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.AddSTENER.resources
+C:\Users\Kevin\Documents\GitHub\Getting-my-Goat-\CIS375Project\CIS375Project\obj\Debug\CIS375Project.AddQuestion.resources

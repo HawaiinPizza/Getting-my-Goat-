@@ -54,6 +54,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddQuestion.Designer.cs">
+      <DependentUpon>AddQuestion.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddSTENER.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     <Compile Include="ViolationLogsOversight.Designer.cs">
       <DependentUpon>ViolationLogsOversight.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddQuestion.resx">
+      <DependentUpon>AddQuestion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddSTENER.resx">
       <DependentUpon>AddSTENER.cs</DependentUpon>
     </EmbeddedResource>
