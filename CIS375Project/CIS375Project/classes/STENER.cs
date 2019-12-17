@@ -77,7 +77,7 @@ namespace CIS375Project.classes
 
         }
         // Get a list of steners to view
-          public List<string> ViewS(STENER c)
+          public List<List<string>> ViewS(STENER c)
           {
             OleDbConnection con = new OleDbConnection(Connstring);
             OleDbCommand cmd = con.CreateCommand();
@@ -89,14 +89,13 @@ namespace CIS375Project.classes
             cmd.ExecuteNonQuery();
             OleDbDataReader read = cmd.ExecuteReader();
 
-            List<string> Arr = new List<string>();
+            List<List<string>> Arr = new List<List<string>>();
             while (read.Read())
             {
-                string Temp="";
-
-                Temp +=
-                    read[0].ToString() + read[1].ToString() + read[2].ToString() ;
-
+                List<string> Temp = new List<string>();
+                Temp.Add(read[0].ToString());
+                Temp.Add(read[1].ToString());
+                Temp.Add(read[2].ToString());
                 Arr.Add(Temp);
             }
             con.Close();

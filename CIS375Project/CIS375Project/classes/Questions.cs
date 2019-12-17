@@ -54,14 +54,14 @@ namespace CIS375Project.classes
                con.Close();
           }
           //this displays all of the questions and answers for a certain STENER
-          public List<string> DisplayQandA(Questions c, int i)
-          {
+            public List<string> DisplayQandA(Questions c, int i)
+            {
             OleDbConnection con = new OleDbConnection(Connstring);
             OleDbCommand cmd = con.CreateCommand();
             DataTable dt = new DataTable();
             con.Open();
 
-            cmd.CommandText = cmd.CommandText = "SELECT Y.* FROM STENERcontents X, Questions Y WHERE X.s_id=@s_id AND X.question_num=Y.question_num";
+            cmd.CommandText = cmd.CommandText = "select * from Questions where s_id= @s_id";
             cmd.Parameters.AddWithValue("@s_id", i);
             OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
             cmd.Connection = con;
@@ -75,7 +75,7 @@ namespace CIS375Project.classes
                 string Temp="";
 
                 Temp +=
-                    read[0].ToString() + ":\t"+  read[1].ToString() + ":\t"+read[2].ToString() + ":\t"+read[3].ToString() + ":\t"+read[5].ToString() + "\n" ;
+                    read[0].ToString() + ":\t"+  read[1].ToString() + ":\t"+read[2].ToString() + "\n" ;
 
                 Arr.Add(Temp);
             }

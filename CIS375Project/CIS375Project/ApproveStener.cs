@@ -15,16 +15,17 @@ namespace CIS375Project
 {
     public partial class ApproveStener : Form
     {
+      public List<List<string>> Array { get; set; }
         public ApproveStener()
         {
             InitializeComponent();
             STENER c = new STENER();
             listBox1.Items.Add("Department\tStener");
-            List<string> Arr  = c.ViewS(c);
-            foreach (string Str in Arr) {
-                string temp = Str[0] + "\t\t" + Str[1];
-                listBox1.Items.Add(temp);
+            List<List<string>> Arr  = c.ViewS(c);
+            foreach (List<string> ArrInner in Arr) {
+                listBox1.Items.Add(ArrInner[0] +"\t" + ArrInner[1] + "\t" + ArrInner[2]);
             }
+            this.Array=Arr;
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -63,9 +64,10 @@ namespace CIS375Project
             }
             else
             {
-                string temp = listBox1.SelectedItem.ToString().Replace("\t", "");
                 STENER form = new STENER();
-                form.Approve(form, temp[0]-48, true);
+                int Temp = Int32.Parse(this.Array[listBox1.SelectedIndex-1][0]);
+                MessageBox.Show("This is your temp\t" + Temp);
+                form.Approve(form, Temp, true);
             }
         }
 
@@ -77,10 +79,10 @@ namespace CIS375Project
             }
             else
             {
-                string temp = listBox1.SelectedItem.ToString().Replace("\t", "");
-                MessageBox.Show(temp[0] + "\t" + temp[1] + "\t");
                 STENER form = new STENER();
-                form.Approve(form, temp[0]-48, false);
+                int Temp = Int32.Parse(this.Array[listBox1.SelectedIndex-1][0]);
+                MessageBox.Show("This is your temp\t" + Temp);
+                form.Approve(form, Temp, false);
             }
 
         }

@@ -65,6 +65,13 @@ namespace CIS375Project
                AddQuestion newQuesiton = new AddQuestion();
                newQuesiton.ShowDialog();
           }
-     }
+
+        private void UIBtnUpdateSTENER_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            UpdateStener Temp = new UpdateStener();
+            Temp.ShowDialog();
+        }
+    }
 }
 
