@@ -103,7 +103,6 @@ namespace CIS375Project.classes
             }
             cmd.CommandText = "UPDATE STENER SET approval=@X WHERE s_id=@Y";
             cmd.Parameters.AddWithValue("@X", value);
-            Console.WriteLine("ID " + id);
             cmd.Parameters.AddWithValue("@Y", id);
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
@@ -162,7 +161,6 @@ namespace CIS375Project.classes
                 }
                 else
                 {
-                    Console.WriteLine("Zaki sucks" + read[4].ToString());
                 }
             }
             con.Close();
@@ -194,7 +192,6 @@ namespace CIS375Project.classes
                 }
                 else
                 {
-                    Console.WriteLine("Zaki sucks" + read[4].ToString());
                 }
             }
             con.Close();

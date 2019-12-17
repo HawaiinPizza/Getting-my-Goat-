@@ -39,19 +39,16 @@ namespace CIS375Project.classes
                         {
                             rows = 1;
                         }
-                    Console.WriteLine(reader[0].ToString());
                     }
             reader.Close();
 
 
                     if (rows < 1)
                     {
-                        Console.WriteLine("FUCK HOES");
                          match = false;
                     }
                     else
                     {
-                        Console.WriteLine(" GET BITCEHS");
                          match = true;
                     }
                     con.Close();

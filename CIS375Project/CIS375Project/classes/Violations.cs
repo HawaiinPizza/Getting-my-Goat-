@@ -39,8 +39,6 @@ namespace CIS375Project.classes
             cmd.ExecuteNonQuery();
             con.Close();
 
-            
-
 
         }
 
