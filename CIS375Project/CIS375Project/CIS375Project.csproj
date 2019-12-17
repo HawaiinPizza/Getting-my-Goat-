@@ -66,6 +66,12 @@
     <Compile Include="AddSTENER.Designer.cs">
       <DependentUpon>AddSTENER.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="BRAINSDataSet.cs">
       <DependentUpon>BRAINSDataSet.xsd</DependentUpon>
     </Compile>
@@ -105,6 +111,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManagement.Designer.cs">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViolationLogs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddSTENER.resx">
       <DependentUpon>AddSTENER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DepartmentScreen.resx">
       <DependentUpon>DepartmentScreen.cs</DependentUpon>
@@ -145,6 +160,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserManagement.resx">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViolationLogs.resx">
       <DependentUpon>ViolationLogs.cs</DependentUpon>
     </EmbeddedResource>
