@@ -49,6 +49,14 @@ namespace CIS375Project
 
         private void button3_Click(object sender, EventArgs e)
         {
+            foreach (List<string> ArrInner in Arr)
+            {
+                if( ArrInner[1].Length==0 || ArrInner[2].Length==0)
+                {
+                    MessageBox.Show("You didn't put in a reason and/or answer in one of the quesions");
+                }
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -68,18 +76,37 @@ namespace CIS375Project
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if (textBox1.Text.Length==0 || textBox2.Text.Length==0  || comboBox1.SelectedIndex==-1 )
+            if (textBox1.Text.Length==0  || comboBox1.SelectedIndex==-1  )
             {
                 MessageBox.Show("Data is empty");
             }
-            else
+            else if(listBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show("YOu didn't select anythng");
+            }
             {
                 Questions Temp = new Questions();
                 Temp.Answer = comboBox1.Text;
                 Temp.Reason = textBox1.Text;
-                Temp.Evidence = textBox2.Text;
+                if (textBox2.Text.Length == 0)
+                {
+                    Temp.Evidence = "N/A";
+                }
+                else
+                {
+                    Temp.Evidence = textBox2.Text;
+                }
                 Temp.QuestionNum =Int32.Parse(Arr[listBox1.SelectedIndex][5]);
                 Temp.InsertAnswer(Temp);
+                listBox1.Items.Clear();
+            Questions form = new Questions();
+             Arr=form.DisplayQandADep(form, UserID.ID);
+            foreach(List<string> Str in Arr)
+            {
+                string STR = "";
+                STR += Str[0] + "\t" + Str[1] + "\t" + Str[2] + "\t" + Str[4] ;
+                listBox1.Items.Add(STR);
+            }
             }
 
         }
