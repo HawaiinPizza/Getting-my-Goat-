@@ -99,6 +99,7 @@
             this.FnameBox.Name = "FnameBox";
             this.FnameBox.Size = new System.Drawing.Size(77, 20);
             this.FnameBox.TabIndex = 5;
+            this.FnameBox.TextChanged += new System.EventHandler(this.FnameBox_TextChanged);
             // 
             // PasswordBox
             // 
@@ -131,6 +132,7 @@
             this.LnameBox.Name = "LnameBox";
             this.LnameBox.Size = new System.Drawing.Size(77, 20);
             this.LnameBox.TabIndex = 9;
+            this.LnameBox.TextChanged += new System.EventHandler(this.LnameBox_TextChanged);
             // 
             // EditUserBtn
             // 

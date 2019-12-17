@@ -30,6 +30,14 @@ namespace CIS375Project
             EditUser AddU = new EditUser();
             AddU.ShowDialog();
         }
+
+        private void DeleteUserBox_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DeleteUser AddU = new DeleteUser();
+            AddU.ShowDialog();
+
+        }
     }
 }
 

@@ -100,8 +100,7 @@ namespace CIS375Project.classes
                OleDbCommand cmd = con.CreateCommand();
                con.Open();
 
-                Console.WriteLine(c.Lname + "	" + c.Fname + "	" + c.UserID + "	" + c.DeptID);
-               cmd.CommandText = "UPDATE [User] SET Lname=Zaki, Fname=@fname,  dept_id="+c.DeptID +"  WHERE user_id=@user_id";
+               cmd.CommandText = "UPDATE [User] SET Lname=@lname, Fname=@fname,  dept_id="+c.DeptID +"  WHERE user_id=@user_id";
                cmd.Connection = con;
 
                cmd.Parameters.AddWithValue("@lname", c.Lname);
@@ -118,8 +117,9 @@ namespace CIS375Project.classes
                OleDbConnection con = new OleDbConnection(Connstring);
                OleDbCommand cmd = con.CreateCommand();
 
-               cmd.CommandText = "DELETE FROM User WHERE user_id=@user_id";
+               cmd.CommandText = "DELETE FROM [User] WHERE user_id=@user_id";
                cmd.Connection = con;
+               cmd.Parameters.AddWithValue("@user_id", c.UserID);
 
                con.Open();
                cmd.ExecuteNonQuery();

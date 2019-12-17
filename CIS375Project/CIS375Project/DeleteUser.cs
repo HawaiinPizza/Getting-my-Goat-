@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace CIS375Project
 {
-     public partial class EditUser : Form
+     public partial class DeleteUser : Form
      {
       public List<List<string>> Array { get; set; }
 
-          public EditUser()
+          public DeleteUser()
           {
                InitializeComponent();
                User c = new User();
@@ -28,33 +28,18 @@ namespace CIS375Project
 
           }
 
-          private void EditUserBtn_Click(object sender, EventArgs e)
+          private void DeleteUserBtn_Click(object sender, EventArgs e)
           {
                User c = new User();
-               c.Fname = FnameBox.Text;
-               c.Lname = LnameBox.Text;
-               c.DeptID = Int32.Parse(dIDBox.Text);
-               c.Username = UsernameBox.Text;
-               c.Password = PasswordBox.Text;
-
                c.UserID = int.Parse(Array[listBox2.SelectedIndex-1][0]);
-               c.EditUser(c);
+            
+               c.DeleteUser(c);
                this.Hide();
                OversightScreen FormDepart = new OversightScreen();
                FormDepart.ShowDialog();
           }
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FnameBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LnameBox_TextChanged(object sender, EventArgs e)
         {
 
         }

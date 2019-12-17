@@ -36,7 +36,7 @@
             // AddUserBox
             // 
             this.AddUserBox.Location = new System.Drawing.Point(25, 79);
-            this.AddUserBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddUserBox.Margin = new System.Windows.Forms.Padding(2);
             this.AddUserBox.Name = "AddUserBox";
             this.AddUserBox.Size = new System.Drawing.Size(147, 103);
             this.AddUserBox.TabIndex = 0;
@@ -47,7 +47,7 @@
             // EditUserBox
             // 
             this.EditUserBox.Location = new System.Drawing.Point(199, 79);
-            this.EditUserBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EditUserBox.Margin = new System.Windows.Forms.Padding(2);
             this.EditUserBox.Name = "EditUserBox";
             this.EditUserBox.Size = new System.Drawing.Size(147, 103);
             this.EditUserBox.TabIndex = 1;
@@ -58,12 +58,13 @@
             // DeleteUserBox
             // 
             this.DeleteUserBox.Location = new System.Drawing.Point(367, 79);
-            this.DeleteUserBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DeleteUserBox.Margin = new System.Windows.Forms.Padding(2);
             this.DeleteUserBox.Name = "DeleteUserBox";
             this.DeleteUserBox.Size = new System.Drawing.Size(147, 103);
             this.DeleteUserBox.TabIndex = 2;
             this.DeleteUserBox.Text = "Delete User";
             this.DeleteUserBox.UseVisualStyleBackColor = true;
+            this.DeleteUserBox.Click += new System.EventHandler(this.DeleteUserBox_Click);
             // 
             // UserManagement
             // 
@@ -73,7 +74,7 @@
             this.Controls.Add(this.DeleteUserBox);
             this.Controls.Add(this.EditUserBox);
             this.Controls.Add(this.AddUserBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UserManagement";
             this.Text = "UserManagement";
             this.ResumeLayout(false);

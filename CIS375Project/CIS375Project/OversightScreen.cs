@@ -32,18 +32,21 @@ namespace CIS375Project
 
           private void UIBtnAddSTENER_Click(object sender, EventArgs e)
           {
+               this.Hide();
                AddSTENER NewStener = new AddSTENER();
                NewStener.ShowDialog();
           }
 
           private void UIBtnviewViolations_Click(object sender, EventArgs e)
           {
+               this.Hide();
                ViolationLogsOversight VioOversight = new ViolationLogsOversight();
                VioOversight.ShowDialog();
           }
 
           private void UIBtnUserMangment_Click(object sender, EventArgs e)
           {
+               this.Hide();
                UserManagement UserM = new UserManagement();
                UserM.ShowDialog();
           }
@@ -58,12 +61,14 @@ namespace CIS375Project
 
           private void AddQBtn_Click(object sender, EventArgs e)
           {
+               this.Hide();
                AddQuestion newQuesiton = new AddQuestion();
                newQuesiton.ShowDialog();
           }
 
         private void UIBtnUpdateSTENER_Click(object sender, EventArgs e)
         {
+            this.Hide();
             UpdateStener Temp = new UpdateStener();
             Temp.ShowDialog();
         }
