@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System;
+using System.Windows;
 
 namespace CIS375Project.classes
 {
@@ -20,17 +21,23 @@ namespace CIS375Project.classes
           {
                OleDbConnection con = new OleDbConnection(Connstring);
                OleDbCommand cmd = con.CreateCommand();
-               
+               try
+               {
+                    cmd.CommandText = "INSERT INTO STENER(d_id) VALUES(@dept_id)";
+                    cmd.Connection = con;
 
-               cmd.CommandText = "INSERT INTO STENER(d_id) VALUES(@dept_id)";
-               cmd.Connection = con;
+                    //insert value
+                    cmd.Parameters.AddWithValue("@d_id", c.D_id);
 
-               //insert value
-               cmd.Parameters.AddWithValue("@d_id", c.D_id);
-               
-               cmd.Connection = con;
-               con.Open();
-               cmd.ExecuteNonQuery();
+                    cmd.Connection = con;
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+               }
+               catch( OleDbException ex)
+               {
+                    string bad = "That dept already exists";
+                    MessageBox.Show(bad);
+               }
                con.Close();
           }
           public void DeleteS(STENER c)
