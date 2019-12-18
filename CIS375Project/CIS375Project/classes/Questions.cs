@@ -77,7 +77,8 @@ namespace CIS375Project.classes
             DataTable dt = new DataTable();
             con.Open();
 
-             cmd.CommandText = "SELECT * FROM Questions where s_id=(SELECT s_id FROM STENER WHERE d_id=@d_id)";
+             cmd.CommandText = "SELECT * FROM Questions where s_id=(SELECT s_id FROM STENER WHERE d_id=d_id)";
+                
 
             OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
             cmd.Parameters.AddWithValue("d_id", i) ;
